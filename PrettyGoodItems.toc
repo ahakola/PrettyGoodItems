@@ -1,0 +1,29 @@
+## Interface: 25001
+## Interface-BCC: 20501
+## Author: Gogh (Mirage Raceway EU) (BCClassic)
+## Title: Pretty Good Items
+## Version: 1.0
+## Notes: BiS-list addon
+## RequiredDeps:
+## SavedVariablesPerCharacter: PrettyGoodItemsCharDB
+
+#@no-lib-strip@
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+Libs\AceDB-3.0\AceDB-3.0.xml
+Libs\AceGUI-3.0\AceGUI-3.0.xml
+Libs\AceConfig-3.0\AceConfig-3.0.xml
+#@end-no-lib-strip@
+
+DataShared.lua
+DataWarrior.lua
+DataPaladin.lua
+DataPriest.lua
+DataShaman.lua
+DataDruid.lua
+DataRogue.lua
+DataMage.lua
+DataWarlock.lua
+DataHunter.lua
+
+PrettyGoodItems.lua
