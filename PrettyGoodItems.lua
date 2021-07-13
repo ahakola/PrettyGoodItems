@@ -27,10 +27,11 @@ local function Print(text, ...)
 	end
 end
 
-function firstToUpper(str) -- https://stackoverflow.com/a/2421746
+local function firstToUpper(str) -- https://stackoverflow.com/a/2421746
 	return (str:gsub("^%l", string.upper))
 end
 
+local _G = _G
 local db, className, classFilename, specNames, topSpec
 local currentPhase = 2 -- Phase + 1 for Pre-Raid-phase
 
@@ -40,9 +41,12 @@ local specialSpecNames = private.specialSpecNames
 
 local phases = { true, true, true, true, true, true }
 local specs = { true, true, true }
--- "|TInterface\\ContainerFrame\\UI-Icon-QuestBang:16:16:0:0:0:0:0:0:0:0|t"
--- "|TInterface\\Transmogrify\\transmog-tooltip-arrow:16:16:0:0:0:0:0:0:0:0|t"
-local tooltipLineIcon = "|TInterface\\Transmogrify\\transmog-tooltip-arrow:0|t"
+--local lineIcon = "Interface\\MINIMAP\\TRACKING\\None"
+--local lineIcon = "Interface\\ContainerFrame\\UI-Icon-QuestBorder"
+--local lineIcon = "Interface\\Tooltips\\ReforgeGreenArrow"
+local lineIcon = "Interface\\Transmogrify\\transmog-tooltip-arrow"
+--|Tpath:height[:width[:offsetX:offsetY:[textureWidth:textureHeight:leftTexel:rightTexel:topTexel:bottomTexel[:rVertexColor:gVertexColor:bVertexColor]]]]|t
+local tooltipLineIcon = "|T" .. lineIcon .. ":0|t"
 local colorHexString = "ff808080" -- Gray
 
 --------------------------------------------------------------------------------
@@ -164,9 +168,9 @@ local function _OnTooltipSetItem(tooltip, ...)
 			-- If the amount of specs returned by the bisList doesn't match with the amount of player specs, use special-case-table for specName
 			local specName = (results[i][3] == #specNames) and specNames[results[i][2]] or specialSpecNames[classFilename][results[i][2]]
 			local itemSlotRank = results[i][4] and results[i][4].rank or "!"
-			tooltip:AddDoubleLine(tooltipLineIcon .. specName, WrapTextInColorCode(phaseName, colorHexString) .. "     " .. itemSlotRank, 0, 0.8, 1, 1, 1, 1)
+			tooltip:AddDoubleLine(tooltipLineIcon .. " " .. specName, WrapTextInColorCode(phaseName, colorHexString) .. "     " .. itemSlotRank, 0, 0.8, 1, 1, 1, 1)
 			if IsModifierKeyDown() then
-				local source = results[i][4] and firstToUpper(results[i][4].source) or "! !"
+				local source = results[i][4] and firstToUpper(results[i][4].source) or "! !" -- "drop", "quest", "vendor" or "crafted"
 				local preciseSource = results[i][4] and results[i][4].preciseSource or "! ! !"
 				tooltip:AddLine("[" .. source .. "] " .. preciseSource, .66, .66, .66, true)
 			end
@@ -237,6 +241,67 @@ end
 
 --------------------------------------------------------------------------------
 
+local texturePool = CreateTexturePool(f, "OVERLAY", 0)
+
+local function _getBiSMarker(itemLink, itemButton)
+	if not (itemLink and itemButton) then return end
+
+	local itemId = _checkLink(itemLink)
+	local results = _getBiSItem(itemId)
+
+	--if itemId == 25930 or itemId == 31730 or itemId == 31728 then -- Debug
+	if #results > 0 then
+		local tex = texturePool:Acquire()
+		tex:SetTexture(lineIcon)
+		--tex:SetSize(12, 12)
+		--tex:SetAllPoints(itemButton)
+		tex:SetPoint("BOTTOMRIGHT", itemButton, 0, 1)
+		tex:SetParent(itemButton)
+		tex:Show()
+
+		Debug("  --> Acquire()", itemButton:GetName(), texturePool:GetNumActive())
+	end
+end
+
+local function _releaseBiSMarker(self)
+	if texturePool:GetNumActive() > 0 then
+		Debug("  <-- ReleaseAll()", self:GetName(), texturePool:GetNumActive())
+		texturePool:ReleaseAll()
+	end
+end
+
+--------------------------------------------------------------------------------
+
+local function _handleButtons(rewardsFrame, index, ...)
+	Debug("_handleButtons", type(rewardsFrame) == "table" and rewardsFrame:GetName() or tostring(rewardsFrame), tostring(index), tostringall(...))
+	if rewardsFrame and rewardsFrame.RewardButtons then -- Turning in quests
+		local itemButton = rewardsFrame.RewardButtons[index]
+		local itemLink = GetQuestItemLink("choice", index) or GetQuestItemLink("reward", index)
+
+		_getBiSMarker(itemLink, itemButton)
+	else -- Looking at the QuestLog
+		texturePool:ReleaseAll() -- We might have changed the quest we are looking at, release old markers if there is any
+		for i = 1, _G.MAX_NUM_ITEMS do
+			local itemButton = _G["QuestLogItem" .. i]
+			local itemLink = itemButton.type and (GetQuestLogItemLink or GetQuestItemLink)(itemButton.type, itemButton:GetID())
+
+			_getBiSMarker(itemLink, itemButton)
+		end
+	end
+end
+
+-- QuestInfoRewardsFrame
+--hooksecurefunc("QuestInfo_ShowRewards", _handleButtons) -- FrameXML/QuestInfo.lua, why won't you fire?
+hooksecurefunc("QuestInfo_GetRewardButton", _handleButtons) -- FrameXML/QuestInfo.lua
+QuestInfoRewardsFrame:HookScript("OnHide", _releaseBiSMarker)
+
+-- QuestLogDetailScrollFrame
+--hooksecurefunc("QuestLog_UpdateQuestDetails", _handleButtons) -- FrameXML/QuestLogFrame.lua
+hooksecurefunc("QuestFrameItems_Update", _handleButtons) -- FrameXML/QuestFrame.lua
+QuestLogDetailScrollFrame:HookScript("OnHide", _releaseBiSMarker)
+
+--------------------------------------------------------------------------------
+
 SLASH_PRETTYGOODITEMS1 = "/pgi"
 SLASH_PRETTYGOODITEMS2 = "/pretygooditems"
 
@@ -246,11 +311,12 @@ SlashCmdList["PRETTYGOODITEMS"] = function(text)
 
 	if command then
 		if command == "list" then
+			Print("Equipped/Bagged BiS-items:")
 			local ires, ti = _getInventoryBiS()
 			local bres, tb = _getBackBagBis()
 			for p = 1, currentPhase do
 				Print(phaseNames[p])
-				Print("   Inventory:")
+				Print("   Equipped:")
 				for i = 1, #ires[p] do
 					Print("      %s: %d / %d", specNames[i], ires[p][i], ti)
 				end
