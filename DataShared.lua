@@ -10,11 +10,19 @@ local ADDON_NAME, private = ...
 --------------------------------------------------------------------------------
 local phaseNames = {
 	"Pre-Raid",
-	"Phase 1", -- Karazhan, Gruul’s Lair, Magtheridon’s Lair
+	"Phase 1", -- Karazhan, Gruul's Lair, Magtheridon's Lair
 	"Phase 2", -- Serpentshrine Cavern, The Eye in Tempest Keep
-	"Phase 3", -- Mount Hyjal, the Black Temple
-	"Phase 4", -- Zul’Aman
+	"Phase 3", -- Mount Hyjal, The Black Temple
+	"Phase 4", -- Zul'Aman
 	"Phase 5" -- Sunwell Plateau
+}
+local phaseRaidLists = {
+	false, -- Pre-Raid
+	"Karazhan\nGruul's Lair\nMagtheridon's Lair", -- Phase 1
+	"Serpentshrine Cavern\nThe Eye in Tempest Keep", -- Phase 2
+	"Mount Hyjal\nThe Black Temple", -- Phase 3
+	"Zul'Aman", -- Phase 4
+	"Sunwell Plateau" -- Phase 5
 }
 
 --------------------------------------------------------------------------------
@@ -50,6 +58,7 @@ local specialSpecNames = {}
 --------------------------------------------------------------------------------
 
 private.phaseNames = phaseNames
+private.phaseRaidLists = phaseRaidLists
 private.bisLists = bisLists
 private.specialSpecNames = specialSpecNames
 
