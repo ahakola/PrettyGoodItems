@@ -1,10 +1,10 @@
---[[---------------------------------------------------------------------------
+--[[----------------------------------------------------------------------------
 	Pretty Good Items
 
 	BiS-list addon.
 
 	By Gogh of Mirage Raceway EU (BCClassic)
----------------------------------------------------------------------------]]--
+----------------------------------------------------------------------------]]--
 local ADDON_NAME, private = ...
 
 local function Debug(text, ...)
@@ -73,6 +73,7 @@ local phaseNames = private.phaseNames
 local phaseRaidLists = private.phaseRaidLists
 local bisLists = private.bisLists
 local specialSpecNames = private.specialSpecNames
+local specIcons = private.specIcons
 local numberOfSpecs = (specialSpecNames[classFilename] and #specialSpecNames[classFilename] or 3) -- Number of specs in the BiS-lists
 
 local dbDefaults = {
@@ -105,6 +106,17 @@ local numbersTextureCoords = { -- 1024 x 512
 	-- Row 3
 	{ 43/1024, 213/1024, 342/512, 511/512 }, -- 8
 	{ 299/1024, 469/1024, 342/512, 511/512 }, -- 9
+}
+local rolesTexture = "Interface\\LFGFRAME\\UI-LFG-ICON-ROLES"
+local rolesTextureHighlight = "Interface\\MINIMAP\\UI-Minimap-ZoomButton-Highlight"
+local rolesTextureCoords = { -- 256 x 256
+	 -- Flag	Healer	Check-mark
+	 -- Tank	DPS		Question-mark
+	 -- Black	Cross
+	 { 2/256, 66/256, 67/256, 131/256 }, -- Tank
+	 { 69/256, 133/256, 67/256, 131/256 }, -- DPS
+	 { 69/256, 133/256, 0/256, 64/256 }, -- Healer
+	 { 136/256, 200/256, 67/256, 131/256 }, -- Questionmark
 }
 
 --------------------------------------------------------------------------------
@@ -905,12 +917,14 @@ end
 local phaseText = buttonBar:CreateFontString(nil, "BACKGROUND", "GameFontHighlight")
 phaseText:SetPoint("TOPLEFT", 20, -10)
 phaseText:SetHeight(32)
+phaseText:SetJustifyH("RIGHT")
 phaseText:SetText("Phase:")
 buttonBar.phaseText = phaseText
 
 local phaseTooltipText = buttonBar:CreateFontString(nil, "BACKGROUND", "GameFontHighlight")
 phaseTooltipText:SetPoint("TOP", phaseText, "BOTTOM", 0, 0)
 phaseTooltipText:SetHeight(24)
+phaseTooltipText:SetJustifyH("RIGHT")
 phaseTooltipText:SetText("Tooltip:")
 buttonBar.phaseTooltipText = phaseTooltipText
 
@@ -929,6 +943,12 @@ for p = 1, #phaseNames do
 		phaseButton:SetPoint("LEFT", buttonBar["Phase" .. (p - 1)], "RIGHT", 20, 0)
 	end
 
+	phaseButton:SetNormalTexture(numbersTexture)
+	phaseButton:SetHighlightTexture(numbersTextureHighlight, "ADD")
+	phaseButton:GetNormalTexture():SetTexCoord(unpack(numbersTextureCoords[p])) -- 0 -> 5
+	phaseButton:GetHighlightTexture():SetTexCoord(unpack(numbersTextureCoords[p])) -- 0 -> 5
+
+	--[[
 	local icon = phaseButton:CreateTexture(nil, "BACKGROUND")
 	icon:SetAllPoints()
 	icon:SetTexture(numbersTexture)
@@ -939,6 +959,7 @@ for p = 1, #phaseNames do
 	highlight:SetTexture(numbersTextureHighlight)
 	highlight:SetTexCoord(unpack(numbersTextureCoords[p])) -- 0 -> 5
 	highlight:SetBlendMode("ADD")
+	]]
 
 	local phaseCheckButton = CreateFrame("CheckButton", "$parentPhaseCheckButton" .. p, phaseButton)
 	phaseCheckButton:SetSize(24, 24)
@@ -956,7 +977,7 @@ for p = 1, #phaseNames do
 
 	if p > currentPhase then
 		phaseButton:Disable()
-		icon:SetVertexColor(.5, .5, .5, .5)
+		phaseButton:GetNormalTexture():SetVertexColor(.5, .5, .5, .5)
 		phaseCheckButton:Disable()
 	end
 
@@ -980,6 +1001,14 @@ for s = numberOfSpecs, 1, -1 do
 		specButton:SetPoint("RIGHT", buttonBar["Spec" .. (s + 1)], "LEFT", -20, 0)
 	end
 
+	specButton:SetNormalTexture(rolesTexture)
+	specButton:SetHighlightTexture(rolesTextureHighlight, "ADD")
+	specButton:GetNormalTexture():SetTexCoord(unpack(s <= #specIcons[classFilename] and rolesTextureCoords[specIcons[classFilename][s]] or rolesTextureCoords[#rolesTextureCoords])) -- 1 -> 3 or 4
+	--specButton:GetHighlightTexture():SetTexCoord(unpack(s <= #rolesTextureCoords and rolesTextureCoords[s] or rolesTextureCoords[#rolesTextureCoords])) -- 1 -> 3 or 4
+	specButton:GetHighlightTexture():SetTexCoord(1/32, 31/32, 0, 30/32) -- 32 x 32, snip 1px from left and right, 0px from top and 2px from bottom for better fit
+
+
+	--[[
 	local icon = specButton:CreateTexture(nil, "BACKGROUND")
 	icon:SetAllPoints()
 	icon:SetTexture(numbersTexture)
@@ -990,6 +1019,7 @@ for s = numberOfSpecs, 1, -1 do
 	highlight:SetTexture(numbersTextureHighlight)
 	highlight:SetTexCoord(unpack(numbersTextureCoords[s + 1])) -- 1 -> 1-4
 	highlight:SetBlendMode("ADD")
+	]]
 
 	local specCheckButton = CreateFrame("CheckButton", "$parentSpecCheckButton" .. s, specButton)
 	specCheckButton:SetSize(24, 24)
@@ -1012,12 +1042,14 @@ end
 local specText = buttonBar:CreateFontString(nil, "BACKGROUND", "GameFontHighlight")
 specText:SetPoint("RIGHT", buttonBar["Spec1"], "LEFT", -20, 0)
 specText:SetHeight(32)
+specText:SetJustifyH("RIGHT")
 specText:SetText("Spec:")
 buttonBar.specText = specText
 
 local specTooltipText = buttonBar:CreateFontString(nil, "BACKGROUND", "GameFontHighlight")
 specTooltipText:SetPoint("TOP", specText, "BOTTOM", 0, 0)
 specTooltipText:SetHeight(24)
+specTooltipText:SetJustifyH("RIGHT")
 specTooltipText:SetText("Tooltip:")
 buttonBar.specTooltipText = specTooltipText
 
@@ -1100,6 +1132,6 @@ SlashCmdList["PRETTYGOODITEMS"] = function(text)
 	end
 end
 
---[[---------------------------------------------------------------------------
+--[[----------------------------------------------------------------------------
 	#EOF
----------------------------------------------------------------------------]]--
+----------------------------------------------------------------------------]]--
