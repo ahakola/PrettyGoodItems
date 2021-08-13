@@ -6,8 +6,10 @@ Currently the addon can show the BiS-list rank per spec and per phase in tooltip
 
 ## Todo
 
-- User control on what specs and/or phases are shown on tooltips
-- UI to show all the items in the BiS-lists
+- ~~User control on what specs and/or phases are shown on tooltips~~
+- ~~UI to show all the items in the BiS-lists~~
+- Improve the BiS-lists (== fixing the bugs in the scraper for better results)
+- ???, you tell me...
 
 ## Known issues
 
