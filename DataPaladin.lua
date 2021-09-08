@@ -2959,10 +2959,1601 @@ bisLists[2].PALADIN[3] = {
 }
 -- Phase 2
 bisLists[3].PALADIN[1] = {
+	-- https://tbc.wowhead.com/guides/holy-paladin-healer-tk-ssc-phase-2-best-in-slot-gear-burning-crusade
+	[30136] = { -- Crystalforge Greathelm
+		rank = 1,
+		source = "drop",
+		preciseSource = "Helm of the Vanquished Champion from Lady Vashj - Serpentshrine Cavern"
+	},
+	[32472] = { -- Justicebringer 2000 Specs
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Crafted Justicebringer 2000 Specs - Engineering"
+	},
+	[30728] = { -- Fathom-Helm of the Deeps
+		rank = 3,
+		source = "drop",
+		preciseSource = "Dropped by Doomwalker - Shadowmoon Valley"
+	},
+	[29061] = { -- Justicar Diadem
+		rank = 4,
+		source = "drop",
+		preciseSource = "Dropped by Prince Malchezaar - Karazhan"
+	},
+	[30138] = { -- Crystalforge Pauldrons
+		rank = 1,
+		source = "drop",
+		preciseSource = "Pauldrons of the Vanquished Champion from Void Reaver - The Eye"
+	},
+	[30097] = { -- Coral-Barbed Shoulderpads
+		rank = 2,
+		source = "drop",
+		preciseSource = "Dropped by Leotheras the Blind - Serpentshrine Cavern"
+	},
+	[29064] = { -- Justicar Pauldrons
+		rank = 3,
+		source = "drop",
+		preciseSource = "Pauldrons of the Fallen Champion from High King Maulgar - Gruul's Lair"
+	},
+	[29989] = { -- Sunshower Light Cloak
+		rank = 1,
+		source = "drop",
+		preciseSource = "Drops from Kael'thas Sunstrider - The Eye"
+	},
+	[28765] = { -- Stainless Cloak of the Pure Hearted
+		rank = 2,
+		source = "drop",
+		preciseSource = "Drops from Prince Malchezaar - Karazhan"
+	},
+	[31329] = { -- Lifegiving Cloak
+		rank = 3,
+		source = "drop",
+		preciseSource = "World Drop - World Drop"
+	},
+	[30134] = { -- Crystalforge Chestpiece
+		rank = 1,
+		source = "drop",
+		preciseSource = "Chestguard of the Vanquished Champion from Kael'thas Sunstrider - The Eye"
+	},
+	[29062] = { -- Justicar Chestpiece
+		rank = 2,
+		source = "drop",
+		preciseSource = "Chestguard of the Fallen Champion from Magtheridon - Magtheridon's Lair"
+	},
+	[21875] = { -- Primal Mooncloth Robe
+		rank = 3,
+		source = "crafted",
+		preciseSource = "Crafted Primal Mooncloth Robe - Tailoring"
+	},
+	[30047] = { -- Blackfathom Warbands
+		rank = 1,
+		source = "drop",
+		preciseSource = "Drops from Hydross the Unstable - Serpentshrine Cavern"
+	},
+	[29523] = { -- Windhawk Bracers
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Crafted Windhawk Bracers - Leatherworking"
+	},
+	[23539] = { -- Blessed Bracers
+		rank = 3,
+		source = "crafted",
+		preciseSource = "Crafted Blessed Bracers - Blacksmithing"
+	},
+	[30112] = { -- Glorious Gauntlets of Crestfall
+		rank = 1,
+		source = "drop",
+		preciseSource = "Drops from Lady Vashj - Serpentshrine Cavern"
+	},
+	[29976] = { -- Worldstorm Gauntlets
+		rank = 2,
+		source = "drop",
+		preciseSource = "Drops from High Astromancer Solarian - The Eye"
+	},
+	[30135] = { -- Crystalforge Gloves
+		rank = 3,
+		source = "drop",
+		preciseSource = "Gloves of the Vanquished Champion from Leotheras the Blind - Serpentshrine Cavern"
+	},
+	[30030] = { -- Girdle of Fallen Stars
+		rank = 1,
+		source = "drop",
+		preciseSource = "Trash Drop - The Eye"
+	},
+	[29965] = { -- Girdle of the Righteous Path
+		rank = 2,
+		source = "drop",
+		preciseSource = "Drops from High Astromancer Solarian - The Eye"
+	},
+	[21873] = { -- Primal Mooncloth Belt
+		rank = 3,
+		source = "crafted",
+		preciseSource = "Crafted Primal Mooncloth Belt - Tailoring"
+	},
+	[29991] = { -- Sunhawk Leggings
+		rank = 1,
+		source = "drop",
+		preciseSource = "Drops from Kael'thas Sunstrider - The Eye"
+	},
+	[30727] = { -- Gilded Trousers of Benediction
+		rank = 2,
+		source = "drop",
+		preciseSource = "Drops from Doomwalker - Shadowmoon Valley"
+	},
+	[30137] = { -- Crystalforge Leggings
+		rank = 3,
+		source = "drop",
+		preciseSource = "Leggings of the Vanquished Champion from Fathom-Lord Karathress - Serpentshrine Cavern"
+	},
+	[30027] = { -- Boots of Courage Unending
+		rank = 1,
+		source = "drop",
+		preciseSource = "Trash Drop - Serpentshrine Cavern"
+	},
+	[30737] = { -- Gold-Leaf Wildboots
+		rank = 2,
+		source = "drop",
+		preciseSource = "Drops from Doom Lord Kazzak - Hellfire Peninsula"
+	},
+	[30092] = { -- Orca-Hide Boots
+		rank = 3,
+		source = "drop",
+		preciseSource = "Drops from Leotheras the Blind - Serpentshrine Cavern"
+	},
+	[30018] = { -- Lord Sanguinar's Claim
+		rank = 1,
+		source = "drop",
+		preciseSource = "Verdant Sphere from Kael'thas Sunstrider - The Eye"
+	},
+	[30726] = { -- Archaic Charm of Presence
+		rank = 2,
+		source = "drop",
+		preciseSource = "Drops from Doomwalker - Shadowmoon Valley"
+	},
+	[28609] = { -- Emberspur Talisman
+		rank = 3,
+		source = "drop",
+		preciseSource = "Drops from Nightbane - Karazhan"
+	},
+	[30110] = { -- Coral Band of the Revived
+		rank = 1,
+		source = "drop",
+		preciseSource = "Drops from Lady Vashj - Serpentshrine Cavern"
+	},
+	[30736] = { -- Ring of Flowing Light
+		rank = 2,
+		source = "drop",
+		preciseSource = "Drops from Doom Lord Kazzak - Hellfire Peninsula"
+	},
+	[28790] = { -- Naaru Lightwarden's Band
+		rank = 3,
+		source = "quest",
+		preciseSource = "The Fall of Magtheridon - Magtheridon's Lair"
+	},
+	[28763] = { -- Jade Ring of the Everliving
+		rank = 4,
+		source = "drop",
+		preciseSource = "Drops from Prince Malchezaar - Karazhan"
+	},
+	[29920] = { -- Phoenix-Ring of Rebirth
+		rank = 5,
+		source = "drop",
+		preciseSource = "Drops from Al'ar - The Eye"
+	},
+	[29376] = { -- Essence of the Martyr
+		rank = 1,
+		source = "vendor",
+		preciseSource = "41x Badge of Justice - G'eras in Shattrath City"
+	},
+	[28590] = { -- Ribbon of Sacrifice
+		rank = 2,
+		source = "drop",
+		preciseSource = "Opera Event - Karazhan"
+	},
+	[23047] = { -- Eye of the Dead
+		rank = 3,
+		source = "drop",
+		preciseSource = "Drops from Sapphiron - Naxxramas WoW Classic"
+	},
+	[30841] = { -- Lower City Prayerbook
+		rank = 4,
+		source = "vendor",
+		preciseSource = "Revered with Lower City - Shattrath City"
+	},
+	[19395] = { -- Rejuvenating Gem
+		rank = 5,
+		source = "drop",
+		preciseSource = "Drops from lesser dragon bosses - Blackwing Lair WoW Classic"
+	},
+	[30108] = { -- Lightfathom Scepter
+		rank = 1,
+		source = "drop",
+		preciseSource = "Drops from Lady Vashj - Serpentshrine Cavern"
+	},
+	[28771] = { -- Light's Justice
+		rank = 2,
+		source = "drop",
+		preciseSource = "Drops from Prince Malchezaar - Karazhan"
+	},
+	[28522] = { -- Shard of the Virtuous
+		rank = 3,
+		source = "drop",
+		preciseSource = "Drops from Maiden of Virtue - Karazhan"
+	},
+	[23556] = { -- Hand of Eternity
+		rank = 4,
+		source = "crafted",
+		preciseSource = "Crafted Hand of Eternity - Blacksmithing"
+	},
+	[29353] = { -- Shockwave Truncheon
+		rank = 5,
+		source = "drop",
+		preciseSource = "Drops from Murmur - Shadow Labyrinth Heroic"
+	},
+	[29923] = { -- Talisman of the Sun King
+		rank = 1,
+		source = "drop",
+		preciseSource = "Drops from Al'ar - The Eye"
+	},
+	[29458] = { -- Aegis of the Vindicator
+		rank = 2,
+		source = "drop",
+		preciseSource = "Drops from Magtheridon - Magtheridon's Lair"
+	},
+	[29274] = { -- Tears of Heaven
+		rank = 3,
+		source = "vendor",
+		preciseSource = "41x Badge of Justice - G'eras in Shattrath City"
+	},
+	[29267] = { -- Light-Bearer's Faith Shield
+		rank = 4,
+		source = "vendor",
+		preciseSource = "33x Badge of Justice - G'eras in Shattrath City"
+	},
+	[28592] = { -- Libram of Souls Redeemed
+		rank = 1,
+		source = "drop",
+		preciseSource = "Opera Event - Karazhan"
+	},
+	[23006] = { -- Libram of Light
+		rank = 2,
+		source = "drop",
+		preciseSource = "Drops from Noth the Plaguebringer - Naxxramas WoW Classic"
+	},
+	[28296] = { -- Libram of the Lightbringer
+		rank = 3,
+		source = "drop",
+		preciseSource = "Drops from Commander Sarannis - The Botanica"
+	},
+	[25644] = { -- Blessed Book of Nagrand
+		rank = 4,
+		source = "quest",
+		preciseSource = "The Ultimate Bloodsport - Nagrand"
+	},
+
 }
 bisLists[3].PALADIN[2] = {
+	-- https://tbc.wowhead.com/guides/paladin-tank-tk-ssc-phase-2-best-in-slot-gear-burning-crusade
+	[30125] = { -- Crystalforge Faceguard
+		rank = 0,
+		source = "drop",
+		preciseSource = "Tankatronic Goggles - Faceguard of Determination"
+	},
+	[29068] = { -- Justicar Faceguard
+		rank = 2,
+		source = "drop",
+		preciseSource = "Helm of the Fallen Champion - Prince Malchezaar, Karazhan"
+	},
+	[30125] = { -- Crystalforge Faceguard
+		rank = 1,
+		source = "drop",
+		preciseSource = "Requires Helm of the Vanquished Champion token - Drops from Lady Vashj in Serpentshrine Cavern"
+	},
+	[32473] = { -- Tankatronic Goggles
+		rank = 3,
+		source = "crafted",
+		preciseSource = "BoP Crafted by Engineers. Requires 370 Engineering to craft."
+	},
+	[32083] = { -- Faceguard of Determination
+		rank = 4,
+		source = "vendor",
+		preciseSource = "Sold by G'eras for 50 Badge of Justice"
+	},
+	[28593] = { -- Eternium Greathelm
+		rank = 5,
+		source = "drop",
+		preciseSource = "Opera Event - Karazhan"
+	},
+	[27704] = { -- Gladiator's Lamellar Helm
+		rank = 6,
+		source = "vendor",
+		preciseSource = "Arena Vendors - Requires Season 1 Gladiator PvP Rank, Shattrath City"
+	},
+	[23536] = { -- Oathkeeper's Helm
+		rank = 7,
+		source = "crafted",
+		preciseSource = "Oathkeeper's Helm - Blacksmithing"
+	},
+	[28285] = { -- Helm of the Righteous
+		rank = 8,
+		source = "drop",
+		preciseSource = "Pathaleon the Calculator - The Mechanar"
+	},
+	[23519] = { -- Felsteel Helm
+		rank = 9,
+		source = "crafted",
+		preciseSource = "Plans: Felsteel Helm - Blacksmithing"
+	},
+	[28180] = { -- Myrmidon's Headdress
+		rank = 10,
+		source = "quest",
+		preciseSource = "The Warlord's Hideout - Watcher Jhang, The Steamvault"
+	},
+	[29070] = { -- Justicar Shoulderguards
+		rank = 1,
+		source = "drop",
+		preciseSource = "Pauldrons of the Fallen Champion - High King Maulgar, Gruul's Lair"
+	},
+	[30127] = { -- Crystalforge Shoulderguards
+		rank = 2,
+		source = "drop",
+		preciseSource = "Requires Pauldrons of the Vanquished Champion token - Drops from Void Reaver in The Eye."
+	},
+	[28743] = { -- Mantle of Abrahmis
+		rank = 3,
+		source = "drop",
+		preciseSource = "Netherspite - Karazhan"
+	},
+	[27706] = { -- Gladiator's Lamellar Shoulders
+		rank = 4,
+		source = "vendor",
+		preciseSource = "Arena Vendors - Requires Season 1 Gladiator PvP Rank, Shattrath City"
+	},
+	[27739] = { -- Spaulders of the Righteous
+		rank = 5,
+		source = "drop",
+		preciseSource = "Laj - The Botanica"
+	},
+	[27847] = { -- Fanblade Pauldrons
+		rank = 6,
+		source = "drop",
+		preciseSource = "Shirrak the Dead Watcher - Auchenai Crypts Heroic"
+	},
+	[32073] = { -- Spaulders of Dementia
+		rank = 7,
+		source = "drop",
+		preciseSource = "Talon King Ikiss - Sethekk Halls Heroic"
+	},
+	[30381] = { -- Kaylaan's Spaulders
+		rank = 8,
+		source = "quest",
+		preciseSource = "Aldor No More - Netherstorm"
+	},
+	[29925] = { -- Phoenix-Wing Cloak
+		rank = 1,
+		source = "drop",
+		preciseSource = "Drop from Al'ar - The Eye"
+	},
+	[27804] = { -- Devilshark Cape
+		rank = 2,
+		source = "drop",
+		preciseSource = "Warlord Kalithresh - The Steamvault"
+	},
+	[28660] = { -- Gilded Thorium Cloak
+		rank = 3,
+		source = "drop",
+		preciseSource = "Terestian Illhoof - Karazhan"
+	},
+	[24253] = { -- Cloak of Eternity
+		rank = 4,
+		source = "crafted",
+		preciseSource = "Pattern: Cloak of Eternity - Tailoring"
+	},
+	[27988] = { -- Burnoose of Shifting Ages
+		rank = 5,
+		source = "drop",
+		preciseSource = "Chrono Lord Deja - The Black Morass"
+	},
+	[24379] = { -- Bogstrok Scale Cloak
+		rank = 6,
+		source = "drop",
+		preciseSource = "Rokmar the Crackler - The Slave Pens"
+	},
+	[29777] = { -- Cloak of the Valiant Defender
+		rank = 7,
+		source = "quest",
+		preciseSource = "Ar'kelos the Guardian - Netherstorm"
+	},
+	[29992] = { -- Royal Cloak of the Sunstriders
+		rank = 1,
+		source = "drop",
+		preciseSource = "Drop from Kael'thas Sunstrider - The Eye"
+	},
+	[30642] = { -- Drape of the Righteous
+		rank = 2,
+		source = "drop",
+		preciseSource = "Drop from trash mobs in Karazhan"
+	},
+	[28570] = { -- Shadow-Cloak of Dalaran
+		rank = 3,
+		source = "drop",
+		preciseSource = "Drop from Moroes - Karazhan"
+	},
+	[28766] = { -- Ruby Drape of the Mysticant
+		rank = 4,
+		source = "drop",
+		preciseSource = "Drop from Prince Malchezaar - Karazhan"
+	},
+	[28378] = { -- Sergeant's Heavy Cape
+		rank = 5,
+		source = "vendor",
+		preciseSource = "Sold by PvP Vendors - 20 Arathi Basin Mark of Honor + 11794 Honor Points"
+	},
+	[28797] = { -- Brute Cloak of the Ogre-Magi
+		rank = 6,
+		source = "drop",
+		preciseSource = "Drop from High King Maulgar - Gruul's Lair"
+	},
+	[30971] = { -- Torn-Heart Cloak
+		rank = 7,
+		source = "quest",
+		preciseSource = "Reward from the quest The Cipher of Damnation - The Second Fragment Recovered"
+	},
+	[29066] = { -- Justicar Chestguard
+		rank = 1,
+		source = "drop",
+		preciseSource = "Chestguard of the Fallen Champion - Magtheridon, Magtheridon's Lair"
+	},
+	[30123] = { -- Crystalforge Chestguard
+		rank = 2,
+		source = "drop",
+		preciseSource = "Requires Chestguard of the Vanquished Champion token - Drop from Kael'thas Sunstrider in The Eye."
+	},
+	[28597] = { -- Panzar'Thar Breastplate
+		rank = 3,
+		source = "drop",
+		preciseSource = "Nightbane - Karazhan"
+	},
+	[27702] = { -- Gladiator's Lamellar Chestpiece
+		rank = 4,
+		source = "vendor",
+		preciseSource = "Arena Vendors - Requires Season 1 Gladiator PvP Rank, Shattrath City"
+	},
+	[28203] = { -- Breastplate of the Righteous
+		rank = 5,
+		source = "drop",
+		preciseSource = "Warlord Kalithresh - The Steamvault"
+	},
+	[28262] = { -- Jade-Skull Breastplate
+		rank = 6,
+		source = "drop",
+		preciseSource = "Nethermancer Sepethrea - The Mechanar"
+	},
+	[29127] = { -- Vindicator's Hauberk
+		rank = 7,
+		source = "vendor",
+		preciseSource = "Quartermaster Endarin - Revered The Aldor, Shattrath City"
+	},
+	[32515] = { -- Wristguards of Determination
+		rank = 1,
+		source = "drop",
+		preciseSource = "Drop from Void Reaver - The Eye"
+	},
+	[29252] = { -- Bracers of Dignity
+		rank = 2,
+		source = "drop",
+		preciseSource = "Harbinger Skyriss - Heroic"
+	},
+	[23538] = { -- Bracers of the Green Fortress
+		rank = 3,
+		source = "crafted",
+		preciseSource = "Plans: Bracers of the Green Fortress - Blacksmithing"
+	},
+	[28502] = { -- Vambraces of Courage
+		rank = 4,
+		source = "drop",
+		preciseSource = "Attumen the Huntsman - Karazhan"
+	},
+	[29463] = { -- Amber Bands of the Aggressor
+		rank = 5,
+		source = "drop",
+		preciseSource = "Warlord Kalithresh - The Steamvault Heroic"
+	},
+	[28167] = { -- Sha'tari Wrought Armguards
+		rank = 6,
+		source = "quest",
+		preciseSource = "The Soul Devices - Shadow Labyrinth"
+	},
+	[30400] = { -- Thadell's Bracers
+		rank = 7,
+		source = "quest",
+		preciseSource = "When the Cows Come Home - Netherstorm"
+	},
+	[29998] = { -- Royal Gauntlets of Silvermoon
+		rank = 1,
+		source = "drop",
+		preciseSource = "Drop from Kael'thas Sunstrider - The Eye"
+	},
+	[30124] = { -- Crystalforge Handguards
+		rank = 2,
+		source = "drop",
+		preciseSource = "Gloves of the Vanquished Champion Token turn-in - Drop from Leotheras the Blind - Serpentshrine Cavern"
+	},
+	[29067] = { -- Justicar Handguards
+		rank = 3,
+		source = "drop",
+		preciseSource = "Gloves of the Fallen Champion token turn-in - The Curator, Karazhan"
+	},
+	[28518] = { -- Iron Gauntlets of the Maiden
+		rank = 4,
+		source = "drop",
+		preciseSource = "Maiden of Virtue - Karazhan"
+	},
+	[30741] = { -- Topaz-Studded Battlegrips
+		rank = 5,
+		source = "drop",
+		preciseSource = "Doom Lord Kazzak - Hellfire Peninsula"
+	},
+	[27703] = { -- Gladiator's Lamellar Gauntlets
+		rank = 6,
+		source = "vendor",
+		preciseSource = "Arena Vendors - Requires Season 1 Gladiator PvP Rank, Shattrath City"
+	},
+	[32072] = { -- Gauntlets of Dissension
+		rank = 7,
+		source = "drop",
+		preciseSource = "Warp Splinter - The Botanica Heroic"
+	},
+	[27535] = { -- Gauntlets of the Righteous
+		rank = 8,
+		source = "drop",
+		preciseSource = "Warchief Kargath Bladefist - The Shattered Halls"
+	},
+	[23517] = { -- Felsteel Gloves
+		rank = 9,
+		source = "crafted",
+		preciseSource = "Plans: Felsteel Gloves - Blacksmithing"
+	},
+	[29134] = { -- Gauntlets of the Chosen
+		rank = 10,
+		source = "drop",
+		preciseSource = "Quartermaster Enuril - The Scryers Revered, Shattrath City"
+	},
+	[30034] = { -- Belt of the Guardian
+		rank = 1,
+		source = "crafted",
+		preciseSource = "BoE Crafted by Blacksmiths (375). Recipe Plans: Belt of the Guardian is a zone-wide drop from Serpentshrine Cavern and The Eye"
+	},
+	[30096] = { -- Girdle of the Invulnerable
+		rank = 2,
+		source = "drop",
+		preciseSource = "Drop from Leotheras the Blind - Serpentshrine Cavern"
+	},
+	[29253] = { -- Girdle of Valorous Deeds
+		rank = 3,
+		source = "drop",
+		preciseSource = "Aeonus - The Black Morass Heroic"
+	},
+	[28566] = { -- Crimson Girdle of the Indomitable
+		rank = 4,
+		source = "drop",
+		preciseSource = "Moroes - Karazhan"
+	},
+	[27672] = { -- Girdle of the Immovable
+		rank = 5,
+		source = "drop",
+		preciseSource = "Quagmirran - The Slave Pens Heroic"
+	},
+	[31460] = { -- Sha'tari Vindicator's Waistguard
+		rank = 6,
+		source = "quest",
+		preciseSource = "How to Break Into the Arcatraz - Netherstorm"
+	},
+	[29238] = { -- Lion's Heart Girdle
+		rank = 7,
+		source = "drop",
+		preciseSource = "Vazruden the Herald - Hellfire Ramparts Heroic"
+	},
+	[30371] = { -- Lightwarden's Girdle
+		rank = 8,
+		source = "quest",
+		preciseSource = "Deathblow to the Legion - Netherstorm"
+	},
+	[30330] = { -- Starcaller's Plated Belt
+		rank = 9,
+		source = "quest",
+		preciseSource = "Arconus the Insatiable - Netherstorm"
+	},
+	[30126] = { -- Crystalforge Legguards
+		rank = 0,
+		source = "drop",
+		preciseSource = "Wrynn Dynasty Greaves"
+	},
+	[30126] = { -- Crystalforge Legguards
+		rank = 1,
+		source = "drop",
+		preciseSource = "Leggings of the Vanquished Champion Token turn-in. Drop from Fathom-Lord Karathress - Serpentshrine Cavern"
+	},
+	[28621] = { -- Wrynn Dynasty Greaves
+		rank = 2,
+		source = "drop",
+		preciseSource = "The Curator - Karazhan"
+	},
+	[29069] = { -- Justicar Legguards
+		rank = 3,
+		source = "drop",
+		preciseSource = "Leggings of the Fallen Champion token turn-in - Gruul the Dragonkiller, Gruul's Lair"
+	},
+	[29184] = { -- Timewarden's Leggings
+		rank = 4,
+		source = "vendor",
+		preciseSource = "Alurmi - Revered Keepers of Time, Tanaris"
+	},
+	[27839] = { -- Legplates of the Righteous
+		rank = 5,
+		source = "drop",
+		preciseSource = "Aeonus - The Black Morass"
+	},
+	[23518] = { -- Felsteel Leggings
+		rank = 6,
+		source = "crafted",
+		preciseSource = "Plans: Felsteel Leggings - Blacksmithing"
+	},
+	[29774] = { -- Kirin'Var Defender's Chausses
+		rank = 7,
+		source = "quest",
+		preciseSource = "The Sigil of Krasus - Netherstorm"
+	},
+	[30033] = { -- Boots of the Protector
+		rank = 0,
+		source = "drop",
+		preciseSource = "Boots of Elusion"
+	},
+	[30033] = { -- Boots of the Protector
+		rank = 1,
+		source = "crafted",
+		preciseSource = "BoP crafted by Blacksmith. Recipe Plans: Boots of the Protector is a zone-wide drop in Serpentshrine Cavern and The Eye."
+	},
+	[30641] = { -- Boots of Elusion
+		rank = 2,
+		source = "drop",
+		preciseSource = "Trash drop - Karazhan"
+	},
+	[32267] = { -- Boots of the Resilient
+		rank = 3,
+		source = "drop",
+		preciseSource = "Drop from High Astromancer Solarian - The Eye"
+	},
+	[29254] = { -- Boots of the Righteous Path
+		rank = 4,
+		source = "drop",
+		preciseSource = "Warchief Kargath Bladefist - The Shattered Halls Heroic"
+	},
+	[30031] = { -- Red Havoc Boots
+		rank = 5,
+		source = "crafted",
+		preciseSource = "BoP crafted by Blacksmith. Recipe Plans: Red Havoc Boots is a zone-wide drop in Serpentshrine Cavern and The Eye."
+	},
+	[28747] = { -- Battlescar Boots
+		rank = 6,
+		source = "drop",
+		preciseSource = "Chess Event - Karazhan"
+	},
+	[29239] = { -- Eaglecrest Warboots
+		rank = 7,
+		source = "drop",
+		preciseSource = "Keli'dan the Breaker - The Blood Furnace Heroic"
+	},
+	[27813] = { -- Boots of the Colossus
+		rank = 8,
+		source = "drop",
+		preciseSource = "Pandemonius - Mana-Tombs Heroic"
+	},
+	[30334] = { -- Starcaller's Plated Stompers
+		rank = 9,
+		source = "quest",
+		preciseSource = "Escape from the Staging Grounds - Netherstorm"
+	},
+	[29325] = { -- Flesh Beast's Metal Greaves
+		rank = 10,
+		source = "quest",
+		preciseSource = "Someone Else's Hard Work Pays Off - Mana-Tombs"
+	},
+	[30386] = { -- Bloodguard's Greaves
+		rank = 11,
+		source = "quest",
+		preciseSource = "Information Gathering - Netherstorm"
+	},
+	[30007] = { -- The Darkener's Grasp
+		rank = 0,
+		source = "drop",
+		preciseSource = "Strength of the Untamed"
+	},
+	[30007] = { -- The Darkener's Grasp
+		rank = 1,
+		source = "quest",
+		preciseSource = "Reward from the quest Kael'thas and the Verdant Sphere. Requires Verdant Sphere dropped by Kael'thas Sunstrider - The Eye."
+	},
+	[28516] = { -- Barbed Choker of Discipline
+		rank = 2,
+		source = "drop",
+		preciseSource = "Maiden of Virtue - Karazhan"
+	},
+	[29173] = { -- Strength of the Untamed
+		rank = 3,
+		source = "vendor",
+		preciseSource = "Fedryen Swiftspear - Revered Cenarion Expedition, Zangarmarsh"
+	},
+	[27871] = { -- Maladaar's Blessed Chaplet
+		rank = 4,
+		source = "drop",
+		preciseSource = "Exarch Maladaar - Auchenai Crypts Heroic"
+	},
+	[30099] = { -- Frayed Tether of the Drowned
+		rank = 5,
+		source = "vendor",
+		preciseSource = "25 Badge of Justice - G'eras, Shattrath City"
+	},
+	[29386] = { -- Necklace of the Juggernaut
+		rank = 6,
+		source = "vendor",
+		preciseSource = "25 Badge of Justice - G'eras, Shattrath City"
+	},
+	[27792] = { -- Steam-Hinge Chain of Valor
+		rank = 7,
+		source = "drop",
+		preciseSource = "Mekgineer Steamrigger - The Steamvault"
+	},
+	[29336] = { -- Mark of the Ravenguard
+		rank = 8,
+		source = "quest",
+		preciseSource = "Brother Against Brother - Auchenai Crypts"
+	},
+	[28321] = { -- Enchanted Thorium Torque
+		rank = 9,
+		source = "drop",
+		preciseSource = "High Botanist Freywinn - The Botanica"
+	},
+	[25809] = { -- Maimfist's Choker
+		rank = 10,
+		source = "quest",
+		preciseSource = "The Will of the Warchief - The Shattered Halls"
+	},
+	[25803] = { -- Medallion of the Valiant Guardian
+		rank = 11,
+		source = "quest",
+		preciseSource = "Turning the Tide - The Shattered Halls"
+	},
+	[24121] = { -- Chain of the Twilight Owl
+		rank = 12,
+		source = "drop",
+		preciseSource = "Design: Chain of the Twilight Owl - Jewelcrafting"
+	},
+	[30015] = { -- The Sun King's Talisman
+		rank = 1,
+		source = "quest",
+		preciseSource = "Reward from the quest Kael'thas and the Verdant Sphere. Requires Verdant Sphere dropped by Kael'thas Sunstrider - The Eye."
+	},
+	[30008] = { -- Pendant of the Lost Ages
+		rank = 2,
+		source = "drop",
+		preciseSource = "Drops from Morogrim Tidewalker - Serpentshrine Cavern"
+	},
+	[33065] = { -- Veteran's Pendant of Dominance
+		rank = 3,
+		source = "drop",
+		preciseSource = "Master Sergeant Biggins/Brave Stonehide"
+	},
+	[28530] = { -- Brooch of Unquenchable Fury
+		rank = 4,
+		source = "drop",
+		preciseSource = "Moroes - Karazhan"
+	},
+	[30083] = { -- Ring of Sundered Souls
+		rank = 1,
+		source = "drop",
+		preciseSource = "Drop from Morogrim Tidewalker - Serpentshrine Cavern"
+	},
+	[30028] = { -- Seventh Ring of the Tirisfalen
+		rank = 2,
+		source = "drop",
+		preciseSource = "Zone-wide trash mob drop in The Eye."
+	},
+	[28407] = { -- Elementium Band of the Sentry
+		rank = 3,
+		source = "drop",
+		preciseSource = "Harbinger Skyriss - "
+	},
+	[29279] = { -- Violet Signet of the Great Protector
+		rank = 4,
+		source = "vendor",
+		preciseSource = "Eminence Among the Violet Eye - Exalted The Violet Eye, Karazhan"
+	},
+	[28675] = { -- Shermanar Great-Ring
+		rank = 5,
+		source = "drop",
+		preciseSource = "Shade of Aran - Karazhan"
+	},
+	[28792] = { -- A'dal's Signet of Defense
+		rank = 6,
+		source = "drop",
+		preciseSource = "Magtheridon's Head - Magtheridon, Magtheridon's Lair"
+	},
+	[31319] = { -- Band of Impenetrable Defenses
+		rank = 7,
+		source = "drop",
+		preciseSource = "World Drop"
+	},
+	[31924] = { -- Yor's Revenge
+		rank = 8,
+		source = "drop",
+		preciseSource = "Yor - Mana-Tombs Heroic"
+	},
+	[29384] = { -- Ring of Unyielding Force
+		rank = 9,
+		source = "vendor",
+		preciseSource = "25 Badge of Justice - G'eras, Shattrath City"
+	},
+	[27822] = { -- Crystal Band of Valor
+		rank = 10,
+		source = "drop",
+		preciseSource = "Tavarok - Mana-Tombs Heroic"
+	},
+	[28211] = { -- Lieutenant's Signet of Lordaeron
+		rank = 11,
+		source = "drop",
+		preciseSource = "Lieutenant Drake - Old Hillsbrad Foothills Heroic"
+	},
+	[24088] = { -- Delicate Eternium Ring
+		rank = 12,
+		source = "drop",
+		preciseSource = "Design: Delicate Eternium Ring - Jewelcrafting"
+	},
+	[29323] = { -- Andormu's Tear
+		rank = 13,
+		source = "quest",
+		preciseSource = "The Opening of the Dark Portal - The Black Morass"
+	},
+	[28265] = { -- Dath'Remar's Ring of Defense
+		rank = 14,
+		source = "drop",
+		preciseSource = "Pathaleon the Calculator - The Mechanar"
+	},
+	[29922] = { -- Band of Al'ar
+		rank = 1,
+		source = "drop",
+		preciseSource = "Drop from Al'ar - The Eye"
+	},
+	[30109] = { -- Ring of Endless Coils
+		rank = 2,
+		source = "drop",
+		preciseSource = "Drop from Lady Vashj - Serpentshrine Cavern"
+	},
+	[29352] = { -- Cobalt Band of Tyrigosa
+		rank = 3,
+		source = "drop",
+		preciseSource = "Drop from Nexus-Prince Shaffar - Mana-Tombs (Heroic)"
+	},
+	[29126] = { -- Seer's Signet
+		rank = 4,
+		source = "drop",
+		preciseSource = "Sold by Quartermaster Enuril. Requires Exalted with The Scryers."
+	},
+	[28793] = { -- Band of Crimson Fury
+		rank = 5,
+		source = "drop",
+		preciseSource = "Magtheridon's Head - Magtheridon, Magtheridon's Lair"
+	},
+	[29287] = { -- Violet Signet of the Archmage
+		rank = 6,
+		source = "quest",
+		preciseSource = "Reward from the quest Eminence Among the Violet Eye - Requires Exalted with The Violet Eye, Karazhan"
+	},
+	[28555] = { -- Seal of the Exorcist
+		rank = 7,
+		source = "vendor",
+		preciseSource = "Sold by Spirit Sage Zran/Spirit Sage Gartok for 50 Spirit Shard."
+	},
+	[33054] = { -- The Seal of Danzalar
+		rank = 8,
+		source = "drop",
+		preciseSource = "Drop from The Lurker Below - Serpentshrine Cavern"
+	},
+	[32774] = { -- The Black Pearl
+		rank = 9,
+		source = "crafted",
+		preciseSource = "BoE Crafted by Jewelcrafters. Can be purchased from Auction House."
+	},
+	[29172] = { -- Ashyen's Gift
+		rank = 10,
+		source = "drop",
+		preciseSource = "Sold by Fedryen Swiftspear. Requires Exalted with Cenarion Expedition."
+	},
+	[28528] = { -- Moroes' Lucky Pocket Watch
+		rank = 1,
+		source = "drop",
+		preciseSource = "Moroes - Karazhan"
+	},
+	[27529] = { -- Figurine of the Colossus
+		rank = 2,
+		source = "drop",
+		preciseSource = "Warchief Kargath Bladefist - The Shattered Halls"
+	},
+	[30629] = { -- Scarab of Displacement
+		rank = 3,
+		source = "drop",
+		preciseSource = "Drop from Hydross the Unstable - Serpentshrine Cavern"
+	},
+	[27891] = { -- Adamantine Figurine
+		rank = 4,
+		source = "drop",
+		preciseSource = "Blackheart the Inciter - Shadow Labyrinth"
+	},
+	[32534] = { -- Brooch of the Immortal King
+		rank = 5,
+		source = "drop",
+		preciseSource = "Terokk - Terokkar Forest"
+	},
+	[30300] = { -- Dabiri's Enigma
+		rank = 6,
+		source = "quest",
+		preciseSource = "Dimensius the All-Devouring - Netherstorm"
+	},
+	[19431] = { -- Styleen's Impeding Scarab
+		rank = 7,
+		source = "drop",
+		preciseSource = "Flamegor - Blackwing Lair WoW Classic"
+	},
+	[24125] = { -- Figurine - Dawnstone Crab
+		rank = 8,
+		source = "drop",
+		preciseSource = "Design: Dawnstone Crab - Jewelcrafting"
+	},
+	[28042] = { -- Regal Protectorate
+		rank = 9,
+		source = "quest",
+		preciseSource = "Overlord/Cruel's Intentions - Hellfire Peninsula"
+	},
+	[23040] = { -- Glyph of Deflection
+		rank = 10,
+		source = "drop",
+		preciseSource = "Sapphiron - Naxxramas WoW Classic"
+	},
+	[29387] = { -- Gnomeregan Auto-Dodger 600
+		rank = 11,
+		source = "drop",
+		preciseSource = "41Badge of Justice - G'eras, Shattrath City"
+	},
+	[31858] = { -- Darkmoon Card: Vengeance
+		rank = 1,
+		source = "quest",
+		preciseSource = "Darkmoon Furies Deck - Darkmoon Faire"
+	},
+	[31859] = { -- Darkmoon Card: Madness
+		rank = 2,
+		source = "quest",
+		preciseSource = "Darkmoon Lunacy Deck - Darkmoon Faire"
+	},
+	[23836] = { -- Goblin Rocket Launcher
+		rank = 3,
+		source = "crafted",
+		preciseSource = "Goblin Engineering"
+	},
+	[23835] = { -- Gnomish Poultryizer
+		rank = 4,
+		source = "crafted",
+		preciseSource = "Gnomish Engineer - Gnomish Engineering"
+	},
+	[32864] = { -- Commander's Badge
+		rank = 5,
+		source = "vendor",
+		preciseSource = "Hail, Commander! - Revered Netherwing, Shadowmoon Valley"
+	},
+	[24126] = { -- Figurine - Living Ruby Serpent
+		rank = 7,
+		source = "drop",
+		preciseSource = "Design: Living Ruby Serpent - Jewelcrafting"
+	},
+	[27770] = { -- Argussian Compass
+		rank = 6,
+		source = "drop",
+		preciseSource = "The Black Stalker - The Underbog Heroic"
+	},
+	[13503] = { -- Alchemist Stone
+		rank = 8,
+		source = "drop",
+		preciseSource = "Recipe: Alchemist Stone - Alchemy"
+	},
+	[28789] = { -- Eye of Magtheridon
+		rank = 1,
+		source = "drop",
+		preciseSource = "Magtheridon - Magtheridon's Lair"
+	},
+	[29370] = { -- Icon of the Silver Crescent
+		rank = 2,
+		source = "drop",
+		preciseSource = "41Badge of Justice - G'eras, Shattrath City"
+	},
+	[30447] = { -- Tome of Fiery Redemption
+		rank = 3,
+		source = "drop",
+		preciseSource = "Drop from Al'ar - The Eye"
+	},
+	[24126] = { -- Figurine - Living Ruby Serpent
+		rank = 4,
+		source = "drop",
+		preciseSource = "Design: Living Ruby Serpent - Jewelcrafting"
+	},
+	[23046] = { -- The Restrained Essence of Sapphiron
+		rank = 5,
+		source = "drop",
+		preciseSource = "Sapphiron - Naxxramas WoW Classic"
+	},
+	[19379] = { -- Neltharion's Tear
+		rank = 6,
+		source = "drop",
+		preciseSource = "Flamegor - Blackwing Lair WoW Classic"
+	},
+	[23207] = { -- Mark of the Champion
+		rank = 7,
+		source = "drop",
+		preciseSource = "The Fall of Kel'Thuzad - The Phylactery of Kel'Thuzad dropped by Kel'Thuzad, Naxxramas WoW Classic"
+	},
+	[18820] = { -- Talisman of Ephemeral Power
+		rank = 8,
+		source = "drop",
+		preciseSource = "Magmadar, Garr, and Golemagg the Incinerator - Molten Core WoW Classic"
+	},
+	[19950] = { -- Zandalarian Hero Charm
+		rank = 9,
+		source = "quest",
+		preciseSource = "The Heart of Hakkar - Heart of Hakkar dropped by Hakkar, Zul'Gurub WoW Classic"
+	},
+	[32963] = { -- Merciless Gladiator's Gavel
+		rank = 0,
+		source = "drop",
+		preciseSource = "Bloodmaw Magus-Blade - Gavel of Unearthed Secrets"
+	},
+	[32963] = { -- Merciless Gladiator's Gavel
+		rank = 1,
+		source = "vendor",
+		preciseSource = "Purchased from Arena PvP Weapon vendors. Requires Season 2 Arena ranking."
+	},
+	[30095] = { -- Fang of the Leviathan
+		rank = 2,
+		source = "drop",
+		preciseSource = "Drop from Leotheras the Blind - Serpentshrine Cavern"
+	},
+	[28802] = { -- Bloodmaw Magus-Blade
+		rank = 3,
+		source = "drop",
+		preciseSource = "Gruul the Dragonkiller - Gruul's Lair"
+	},
+	[32450] = { -- Gladiator's Gavel
+		rank = 4,
+		source = "vendor",
+		preciseSource = "Arena Vendors - Requires Season 1 Gladiator PvP Rank, Shattrath City"
+	},
+	[30832] = { -- Gavel of Unearthed Secrets
+		rank = 5,
+		source = "vendor",
+		preciseSource = "Nakodu - Exalted Lower City, Shattrath City"
+	},
+	[29153] = { -- Blade of the Archmage
+		rank = 6,
+		source = "vendor",
+		preciseSource = "Quartermaster Urgronn - Exalted Honor Hold, Hellfire Peninsula"
+	},
+	[29155] = { -- Stormcaller
+		rank = 7,
+		source = "vendor",
+		preciseSource = "Logistics Officer Ulrike - Exalted with Thrallmar, Hellfire Peninsula"
+	},
+	[32660] = { -- Crystalforged Sword
+		rank = 8,
+		source = "drop",
+		preciseSource = "BoE. Can be created by charging Depleted Sword with 50 Apexis Shard - Blade's Edge Mountains"
+	},
+	[29185] = { -- Continuum Blade
+		rank = 9,
+		source = "vendor",
+		preciseSource = "Alurmi - Revered Keepers of Time - Tanaris"
+	},
+	[27899] = { -- Mana Wrath
+		rank = 10,
+		source = "drop",
+		preciseSource = "Pathaleon the Calculator - The Mechanar"
+	},
+	[27905] = { -- Greatsword of Horrid Dreams
+		rank = 11,
+		source = "drop",
+		preciseSource = "Murmur - Shadow Labyrinth"
+	},
+	[29388] = { -- Libram of Repentance
+		rank = 1,
+		source = "vendor",
+		preciseSource = "15 Badge of Justice - G'eras, Shattrath City"
+	},
+	[27917] = { -- Libram of the Eternal Rest
+		rank = 2,
+		source = "drop",
+		preciseSource = "Darkweaver Syth - Sethekk Halls"
+	},
+	[32045] = { -- Merciless Gladiator's Shield Wall
+		rank = 1,
+		source = "vendor",
+		preciseSource = "Purchased from Arena PvP Weapon vendors. Requires Season 2 Arena ranking."
+	},
+	[33313] = { -- Merciless Gladiator's Barrier
+		rank = 2,
+		source = "vendor",
+		preciseSource = "Purchased from Arena PvP Weapon vendors. Requires Season 2 Arena ranking."
+	},
+	[28825] = { -- Aldori Legacy Defender
+		rank = 3,
+		source = "drop",
+		preciseSource = "Gruul the Dragonkiller - Gruul's Lair"
+	},
+	[28358] = { -- Gladiator's Shield Wall
+		rank = 4,
+		source = "vendor",
+		preciseSource = "Arena Vendors - Requires Season 1 Gladiator PvP Rank, Shattrath City"
+	},
+	[28606] = { -- Shield of Impenetrable Darkness
+		rank = 5,
+		source = "drop",
+		preciseSource = "Nightbane - Karazhan"
+	},
+	[29176] = { -- Crest of the Sha'tar
+		rank = 6,
+		source = "drop",
+		preciseSource = "Almaador - Requires Exalted with The Sha'tar - Shattrath City"
+	},
+	[29266] = { -- Azure-Shield of Coldarra
+		rank = 7,
+		source = "vendor",
+		preciseSource = "33 Badge of Justice - G'eras, Shattrath City"
+	},
+	[32082] = { -- The Fel Barrier
+		rank = 8,
+		source = "drop",
+		preciseSource = "Nexus-Prince Shaffar - Mana-Tombs Heroic"
+	},
+	[32652] = { -- Ogri'la Aegis
+		rank = 9,
+		source = "vendor",
+		preciseSource = "Jho'nass - Revered Ogri'la, Blade's Edge Mountains"
+	},
+	[28316] = { -- Aegis of the Sunbird
+		rank = 10,
+		source = "drop",
+		preciseSource = "High Botanist Freywinn - The Botanica"
+	},
+	[27449] = { -- Blood Knight Defender
+		rank = 11,
+		source = "drop",
+		preciseSource = "Watchkeeper Gargolmar - Hellfire Ramparts Heroic"
+	},
+	[27887] = { -- Platinum Shield of the Valorous
+		rank = 12,
+		source = "drop",
+		preciseSource = "Ambassador Hellmaw - Shadow Labyrinth"
+	},
+	[23043] = { -- The Face of Death
+		rank = 13,
+		source = "drop",
+		preciseSource = "Sapphiron - Naxxramas WoW Classic"
+	},
+
 }
 bisLists[3].PALADIN[3] = {
+	-- https://tbc.wowhead.com/guides/retribution-paladin-dps-tk-ssc-phase-2-best-in-slot-gear-burning-crusade
+	[32461] = { -- Furious Gizmatic Goggles
+		rank = 1,
+		source = "crafted",
+		preciseSource = "Engineering: Furious Gizmatic Goggles "
+	},
+	[30131] = { -- Crystalforge War-Helm
+		rank = 2,
+		source = "drop",
+		preciseSource = "Helm of the Vanquished Champion - Lady Vashj - "
+	},
+	[32041] = { -- Merciless Gladiator's Scaled Helm
+		rank = 3,
+		source = "drop",
+		preciseSource = "Vixton Pinchwhistle - "
+	},
+	[29073] = { -- Justicar Crown
+		rank = 4,
+		source = "drop",
+		preciseSource = "Helm of the Fallen Champion - Prince Malchezaar - "
+	},
+	[29983] = { -- Fel-Steel Warhelm
+		rank = 5,
+		source = "drop",
+		preciseSource = "Void Reaver - "
+	},
+	[28182] = { -- Helm of the Claw
+		rank = 6,
+		source = "quest",
+		preciseSource = "The Warlord's Hideout - Found outside, target in The Steamvault"
+	},
+	[30055] = { -- Shoulderpads of the Stranger
+		rank = 1,
+		source = "drop",
+		preciseSource = "Hydross the Unstable, Serpentshrine Cavern"
+	},
+	[30133] = { -- Crystalforge Shoulderbraces
+		rank = 2,
+		source = "drop",
+		preciseSource = "Pauldrons of the Vanquished Champion - Void Reaver, The Eye"
+	},
+	[29075] = { -- Justicar Shoulderplates
+		rank = 3,
+		source = "drop",
+		preciseSource = "Pauldrons of the Fallen Champion - High King Maulgar, Gruul's Lair"
+	},
+	[30740] = { -- Ripfiend Shoulderplates
+		rank = 4,
+		source = "drop",
+		preciseSource = "Doom Lord Kazzak - Hellfire Peninsula"
+	},
+	[32043] = { -- Merciless Gladiator's Scaled Shoulders
+		rank = 5,
+		source = "drop",
+		preciseSource = "Vixton Pinchwhistle - "
+	},
+	[28755] = { -- Bladed Shoulderpads of the Merciless
+		rank = 6,
+		source = "drop",
+		preciseSource = "Chess Event - Karazhan"
+	},
+	[30098] = { -- Razor-Scale Battlecloak
+		rank = 1,
+		source = "drop",
+		preciseSource = "Morogrim Tidewalker - Raid Serpentshrine Cavern"
+	},
+	[24259] = { -- Vengeance Wrap
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Vengeance Wrap - Tailoring"
+	},
+	[33122] = { -- Cloak of Darkness
+		rank = 3,
+		source = "crafted",
+		preciseSource = "Cloak of Darkness - Leatherworking"
+	},
+	[29994] = { -- Thalassian Wildercloak
+		rank = 4,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - Raid The Eye"
+	},
+	[27878] = { -- Auchenai Death Shroud
+		rank = 5,
+		source = "drop",
+		preciseSource = "Shade of Aran - Karazhan"
+	},
+	[28529] = { -- Royal Cloak of Arathi Kings
+		rank = 6,
+		source = "drop",
+		preciseSource = "Moroes - Karazhan"
+	},
+	[30129] = { -- Crystalforge Breastplate
+		rank = 1,
+		source = "drop",
+		preciseSource = "Chestguard of the Vanquished Champion - Kael'thas Sunstrider, The Eye"
+	},
+	[28485] = { -- Bulwark of the Ancient Kings
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Bulwark of the Ancient Kings - Armorsmithing"
+	},
+	[30101] = { -- Bloodsea Brigand's Vest
+		rank = 3,
+		source = "drop",
+		preciseSource = "Fathom-Lord Karathress, raid Serpentshrine Cavern"
+	},
+	[30102] = { -- Krakken-Heart Breastplate
+		rank = 4,
+		source = "drop",
+		preciseSource = "Lady Vashj, raid Serpentshrine Cavern"
+	},
+	[29071] = { -- Justicar Breastplate
+		rank = 5,
+		source = "drop",
+		preciseSource = "Chestguard of the Fallen Champion - Magtheridon, Magtheridon's Lair"
+	},
+	[32039] = { -- Merciless Gladiator's Scaled Chestpiece
+		rank = 6,
+		source = "drop",
+		preciseSource = "Vixton Pinchwhistle - "
+	},
+	[30730] = { -- Terrorweave Tunic
+		rank = 7,
+		source = "drop",
+		preciseSource = "Doom Lord Kazzak - Hellfire Peninsula"
+	},
+	[30057] = { -- Bracers of Eradication
+		rank = 1,
+		source = "drop",
+		preciseSource = "The Lurker Below - "
+	},
+	[28795] = { -- Bladespire Warbands
+		rank = 2,
+		source = "drop",
+		preciseSource = "High King Maulgar - "
+	},
+	[23537] = { -- Black Felsteel Bracers
+		rank = 3,
+		source = "crafted",
+		preciseSource = "Black Felsteel Bracers - Blacksmithing"
+	},
+	[28646] = { -- General's Scaled Bracers
+		rank = 4,
+		source = "vendor",
+		preciseSource = "Vendor TBD - Zone TBD"
+	},
+	[27918] = { -- Bands of Syth
+		rank = 5,
+		source = "drop",
+		preciseSource = "Darkweaver Syth - "
+	},
+	[29947] = { -- Gloves of the Searing Grip
+		rank = 1,
+		source = "drop",
+		preciseSource = "Al'ar - The Eye"
+	},
+	[30644] = { -- Grips of Deftness
+		rank = 2,
+		source = "drop",
+		preciseSource = "Trash drop - Karazhan"
+	},
+	[30341] = { -- Flesh Handler's Gauntlets
+		rank = 3,
+		source = "quest",
+		preciseSource = "The Flesh Lies... - Netherstorm"
+	},
+	[18823] = { -- Aged Core Leather Gloves
+		rank = 4,
+		source = "drop",
+		preciseSource = "Golemagg the Incinerator, Magmadar, or Garr - Molten Core"
+	},
+	[30106] = { -- Belt of One-Hundred Deaths
+		rank = 1,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine Cavern"
+	},
+	[28779] = { -- Girdle of the Endless Pit
+		rank = 2,
+		source = "drop",
+		preciseSource = "Magtheridon - Magtheridon's Lair"
+	},
+	[28828] = { -- Gronn-Stitched Girdle
+		rank = 3,
+		source = "drop",
+		preciseSource = "Gruul the Dragonkiller - "
+	},
+	[29247] = { -- Girdle of the Deathdealer
+		rank = 4,
+		source = "drop",
+		preciseSource = "Aeonus - Heroic "
+	},
+	[28750] = { -- Girdle of Treachery
+		rank = 5,
+		source = "drop",
+		preciseSource = "Chess Event - Karazhan"
+	},
+	[29950] = { -- Greaves of the Bloodwarder
+		rank = 1,
+		source = "drop",
+		preciseSource = "High Astromancer Solarian - The Eye"
+	},
+	[30257] = { -- Shattrath Leggings
+		rank = 2,
+		source = "quest",
+		preciseSource = "Special Delivery to Shattrath City - Netherstorm"
+	},
+	[29995] = { -- Leggings of Murderous Intent
+		rank = 3,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The Eye"
+	},
+	[30132] = { -- Crystalforge Greaves
+		rank = 4,
+		source = "drop",
+		preciseSource = "Leggings of the Vanquished Champion - Fathom-Lord Karathress - Serpentshrine Cavern"
+	},
+	[31544] = { -- Clefthoof Hide Leggings
+		rank = 5,
+		source = "quest",
+		preciseSource = "Showdown or Showdown - Blade's Edge Mountains"
+	},
+	[30081] = { -- Warboots of Obliteration
+		rank = 1,
+		source = "drop",
+		preciseSource = "Morogrim Tidewalker - Serpentshrine Cavern "
+	},
+	[29951] = { -- Star-Strider Boots
+		rank = 2,
+		source = "drop",
+		preciseSource = "High Astromancer Solarian - The Eye "
+	},
+	[30104] = { -- Cobra-Lash Boots
+		rank = 3,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine Cavern "
+	},
+	[28608] = { -- Ironstriders of Urgency
+		rank = 4,
+		source = "drop",
+		preciseSource = "Nightbane - Karazhan "
+	},
+	[28545] = { -- Edgewalker Longboots
+		rank = 5,
+		source = "drop",
+		preciseSource = "Moroes - Karazhan "
+	},
+	[30022] = { -- Pendant of the Perilous
+		rank = 1,
+		source = "drop",
+		preciseSource = "Trash trop - Serpentshrine Cavern"
+	},
+	[29381] = { -- Choker of Vile Intent
+		rank = 2,
+		source = "drop",
+		preciseSource = "Badge of Justice x25 - G'eras, Shattrath City"
+	},
+	[28509] = { -- Worgen Claw Necklace
+		rank = 3,
+		source = "drop",
+		preciseSource = "Attumen the Huntsman - Karazhan"
+	},
+	[28745] = { -- Mithril Chain of Heroism
+		rank = 4,
+		source = "drop",
+		preciseSource = "Chess Event - Karazhan"
+	},
+	[29119] = { -- Haramad's Bargain
+		rank = 5,
+		source = "vendor",
+		preciseSource = "Exalted with The Consortium - Paulsta'ats, Nagrand"
+	},
+	[31275] = { -- Necklace of Trophies
+		rank = 6,
+		source = "drop",
+		preciseSource = "Random world drop - Anywhere"
+	},
+	[30834] = { -- Shapeshifter's Signet
+		rank = 1,
+		source = "vendor",
+		preciseSource = "Lower City Exalted - Vendor: Nakodu, Shattrath City"
+	},
+	[29997] = { -- Band of the Ranger-General
+		rank = 2,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The Eye"
+	},
+	[30061] = { -- Ancestral Ring of Conquest
+		rank = 3,
+		source = "drop",
+		preciseSource = "The Lurker Below - Serpentshrine Cavern"
+	},
+	[30738] = { -- Ring of Reciprocity
+		rank = 4,
+		source = "drop",
+		preciseSource = "Doom Lord Kazzak - Hellfire Peninsula"
+	},
+	[28757] = { -- Ring of a Thousand Marks
+		rank = 5,
+		source = "drop",
+		preciseSource = "Prince Malchezaar - Karazhan"
+	},
+	[28730] = { -- Mithril Band of the Unscarred
+		rank = 6,
+		source = "vendor",
+		preciseSource = "The Sha'tar Exalted - Karazhan"
+	},
+	[29383] = { -- Bloodlust Brooch
+		rank = 1,
+		source = "drop",
+		preciseSource = "Badge of Justice x 41 - G'eras, Shattrath City"
+	},
+	[28830] = { -- Dragonspine Trophy
+		rank = 2,
+		source = "drop",
+		preciseSource = "Gruul the Dragonkiller - Gruul's Lair"
+	},
+	[23206] = { -- Mark of the Champion
+		rank = 3,
+		source = "drop",
+		preciseSource = "Kel'Thuzad drops item The Phylactery of Kel'Thuzad for quest The Fall of Kel'Thuzad - Naxxramas"
+	},
+	[30627] = { -- Tsunami Talisman
+		rank = 4,
+		source = "drop",
+		preciseSource = "Leotheras the Blind Serpentshrine Cavern "
+	},
+	[28288] = { -- Abacus of Violent Odds
+		rank = 5,
+		source = "drop",
+		preciseSource = "Pathaleon the Calculator The Mechanar "
+	},
+	[31856] = { -- Darkmoon Card: Crusade
+		rank = 6,
+		source = "quest",
+		preciseSource = "Darkmoon Blessings Deck - Darkmoon Fair"
+	},
+	[28034] = { -- Hourglass of the Unraveller
+		rank = 7,
+		source = "drop",
+		preciseSource = "Temporus - The Black Morass"
+	},
+	[22954] = { -- Kiss of the Spider
+		rank = 8,
+		source = "drop",
+		preciseSource = "Maexxna - "
+	},
+	[23041] = { -- Slayer's Crest
+		rank = 9,
+		source = "drop",
+		preciseSource = "Sapphiron - "
+	},
+	[19406] = { -- Drake Fang Talisman
+		rank = 10,
+		source = "drop",
+		preciseSource = "Ebonroc - Blackwing Lair"
+	},
+	[28430] = { -- Lionheart Executioner
+		rank = 1,
+		source = "crafted",
+		preciseSource = "Lionheart Executioner - Blacksmithing"
+	},
+	[29993] = { -- Twinblade of the Phoenix
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Lionheart Blade then Lionheart Champion - Blacksmithing"
+	},
+	[28442] = { -- Stormherald
+		rank = 3,
+		source = "crafted",
+		preciseSource = "Stormherald - Blacksmithing"
+	},
+	[31984] = { -- Merciless Gladiator's Greatsword
+		rank = 4,
+		source = "drop",
+		preciseSource = "Vixton Pinchwhistle - Netherstorm"
+	},
+	[30090] = { -- World Breaker
+		rank = 5,
+		source = "drop",
+		preciseSource = "Fathom-Lord Karathress - Serpentshrine Cavern "
+	},
+	[28773] = { -- Gorehowl
+		rank = 6,
+		source = "drop",
+		preciseSource = "Prince Malchezaar - Karazhan "
+	},
+	[27484] = { -- Libram of Avengement
+		rank = 1,
+		source = "drop",
+		preciseSource = "The Maker - The Blood Furnace Heroic only"
+	},
+	[22401] = { -- Libram of Hope
+		rank = 2,
+		source = "drop",
+		preciseSource = "Isalien - Dire Maul East"
+	},
+	[23203] = { -- Libram of Fervor
+		rank = 3,
+		source = "drop",
+		preciseSource = "World Drop - Drops anywhere from high level elites"
+	},
+	[22402] = { -- Libram of Grace
+		rank = 4,
+		source = "drop",
+		preciseSource = "Fankriss the Unyielding - Temple of Ahn'Qiraj"
+	},
+
 }
 -- Phase 3
 bisLists[4].PALADIN[1] = {

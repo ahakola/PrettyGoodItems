@@ -481,6 +481,128 @@ bisLists[2].HUNTER[3] = {
 }
 -- Phase 2
 bisLists[3].HUNTER[1] = {
+	-- https://tbc.wowhead.com/guides/beast-mastery-hunter-dps-tk-ssc-phase-2-best-in-slot-gear-burning-crusade
+	[30040] = { -- Belt of Deep Shadow
+		rank = 1,
+		source = "drop",
+		preciseSource = "Trash Mobs - Pattern: Belt of Deep Shadow - Serpentshrine Cavern"
+	},
+	[30046] = { -- Belt of the Black Eagle
+		rank = 2,
+		source = "drop",
+		preciseSource = "Trash Mobs - Pattern: Belt of the Black Eagle - Serpentshrine Cavern"
+	},
+	[30106] = { -- Belt of One-Hundred Deaths
+		rank = 3,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine Cavern"
+	},
+	[28828] = { -- Gronn-Stitched Girdle
+		rank = 4,
+		source = "drop",
+		preciseSource = "Gruul the Dragonkiller - Gruul's Lair"
+	},
+	[28750] = { -- Girdle of Treachery
+		rank = 5,
+		source = "drop",
+		preciseSource = "Echo of Medivh - Karazhan"
+	},
+	[29247] = { -- Girdle of the Deathdealer
+		rank = 6,
+		source = "drop",
+		preciseSource = "Heroic Aeonus - The Black Morass"
+	},
+	[29526] = { -- Primalstrike Belt
+		rank = 7,
+		source = "crafted",
+		preciseSource = "Primalstrike Belt - Peter Galen - Stormwind CityOrgrimmar"
+	},
+	[27760] = { -- Dunewind Sash
+		rank = 8,
+		source = "drop",
+		preciseSource = "Ghaz'an - The Underbog"
+	},
+	[29516] = { -- Ebon Netherscale Belt
+		rank = 9,
+		source = "crafted",
+		preciseSource = "Ebon Netherscale Belt - Stormwind CityOrgrimmar"
+	},
+	[28656] = { -- Girdle of the Prowler
+		rank = 10,
+		source = "drop",
+		preciseSource = "Terestian Illhoof - Karazhan"
+	},
+	[28830] = { -- Dragonspine Trophy
+		rank = 1,
+		source = "drop",
+		preciseSource = "Gruul the Dragonkiller - Gruul's Lair"
+	},
+	[29383] = { -- Bloodlust Brooch
+		rank = 2,
+		source = "drop",
+		preciseSource = "G'eras - Shattrath City"
+	},
+	[28288] = { -- Abacus of Violent Odds
+		rank = 3,
+		source = "drop",
+		preciseSource = "Pathaleon the Calculator - The Mechanar"
+	},
+	[30627] = { -- Tsunami Talisman
+		rank = 4,
+		source = "drop",
+		preciseSource = "Leotheras the Blind - Serpentshrine Cavern"
+	},
+	[28034] = { -- Hourglass of the Unraveller
+		rank = 5,
+		source = "drop",
+		preciseSource = "Temporus - The Black Morass"
+	},
+	[21670] = { -- Badge of the Swarmguard
+		rank = 6,
+		source = "drop",
+		preciseSource = "Battleguard Sartura - Temple of Ahn'Qiraj"
+	},
+	[28041] = { -- Bladefist's Breadth
+		rank = 7,
+		source = "quest",
+		preciseSource = "Overlord/Cruel's Intentions - Hellfire Peninsula"
+	},
+	[18714] = { -- Ancient Sinew Wrapped Lamina
+		rank = 1,
+		source = "drop",
+		preciseSource = "Molten Core"
+	},
+	[29143] = { -- Clefthoof Hide Quiver
+		rank = 2,
+		source = "drop",
+		preciseSource = "Nagrand"
+	},
+	[19319] = { -- Harpy Hide Quiver
+		rank = 3,
+		source = "drop",
+		preciseSource = "Alterac Mountains"
+	},
+	[33803] = { -- Adamantite Stinger
+		rank = 1,
+		source = "drop",
+		preciseSource = "Netherstorm"
+	},
+	[31949] = { -- Warden's Arrow
+		rank = 2,
+		source = "drop",
+		preciseSource = "Zangarmarsh"
+	},
+	[30611] = { -- Halaani Razorshaft
+		rank = 3,
+		source = "drop",
+		preciseSource = "Nagrand"
+	},
+	[28056] = { -- Blackflight Arrow
+		rank = 4,
+		source = "vendor",
+		preciseSource = "The Burning Crusade"
+	},
+
 }
 bisLists[3].HUNTER[2] = {
 }

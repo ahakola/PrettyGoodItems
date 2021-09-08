@@ -1627,8 +1627,547 @@ bisLists[2].PRIEST[2] = {
 }
 -- Phase 2
 bisLists[3].PRIEST[1] = {
+	-- https://tbc.wowhead.com/guides/priest-healer-tk-ssc-phase-2-best-in-slot-gear-burning-crusade
+	[30152] = { -- Cowl of the Avatar
+		rank = 1,
+		source = "drop",
+		preciseSource = "Lady VashjHelm of the Vanquished Defender - Serpentshrine Cavern"
+	},
+	[32495] = { -- Engineering
+		rank = 2,
+		source = "drop",
+		preciseSource = "Heavy Knothide Leather (6)Khorium Power Core (1)Hardened Adamantite Tube (2)Felsteel Stabilizer (4)Primal Nether (1)Noble Topaz (2) - Master Engineering Trainer (370)Gossip option"
+	},
+	[29049] = { -- Light-Collar of the Incarnate
+		rank = 3,
+		source = "drop",
+		preciseSource = "Prince MalchezaarHelm of the Fallen Defender - Karazhan"
+	},
+	[24264] = { -- Whitemend Hood
+		rank = 4,
+		source = "crafted",
+		preciseSource = "Primal Mooncloth (10)Primal Might (5)Primal Nether (1) - Warp SplinterPattern: Whitemend Hood (1%)"
+	},
+	[29990] = { -- Crown of the Sun
+		rank = 5,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The Eye"
+	},
+	[30154] = { -- Mantle of the Avatar
+		rank = 1,
+		source = "drop",
+		preciseSource = "Void ReaverPauldrons of the Vanquished Defender - The Eye"
+	},
+	[21874] = { -- Primal Mooncloth Shoulders
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Primal Mooncloth (8)Netherweb Spider Silk (2)Primal Life (8) - Nasmara MoonsongPattern: Primal Mooncloth Shoulders"
+	},
+	[29054] = { -- Light-Mantle of the Incarnate
+		rank = 3,
+		source = "drop",
+		preciseSource = "High King MaulgarPauldrons of the Fallen Defender - Gruul's Lair"
+	},
+	[29989] = { -- Sunshower Light Cloak
+		rank = 1,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The Eye"
+	},
+	[28765] = { -- Stainless Cloak of the Pure Hearted
+		rank = 2,
+		source = "drop",
+		preciseSource = "Prince Malchezaar - Karazhan"
+	},
+	[31329] = { -- Lifegiving Cloak
+		rank = 3,
+		source = "drop",
+		preciseSource = "World Drop"
+	},
+	[30150] = { -- Vestments of the Avatar
+		rank = 1,
+		source = "drop",
+		preciseSource = "Kael'thas SunstriderChestguard of the Vanquished Defender - The Eye"
+	},
+	[21875] = { -- Primal Mooncloth Robe
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Primal Mooncloth (14)Primal Mana (12)Netherweb Spider Silk (4) - Nasmara MoonsongPattern: Primal Mooncloth Robe"
+	},
+	[29050] = { -- Robes of the Incarnate
+		rank = 3,
+		source = "drop",
+		preciseSource = "MagtheridonChestguard of the Fallen Defender - Magtheridon's Lair"
+	},
+	[32516] = { -- Wraps of Purification
+		rank = 1,
+		source = "drop",
+		preciseSource = "Hydross the Unstable - Serpentshrine Cavern"
+	},
+	[30684] = { -- Ravager's Cuffs of Healing
+		rank = 2,
+		source = "drop",
+		preciseSource = "Rokad the Ravager - Karazhan"
+	},
+	[29183] = { -- Bindings of the Timewalker
+		rank = 3,
+		source = "vendor",
+		preciseSource = "Keepers of Time—Exalted - Alurmi"
+	},
+	[28511] = { -- Bands of Indwelling
+		rank = 4,
+		source = "drop",
+		preciseSource = "Maiden of Virtue - Karazhan"
+	},
+	[29249] = { -- Bands of the Benevolent
+		rank = 5,
+		source = "drop",
+		preciseSource = "Talon King Ikiss  - Sethekk Halls "
+	},
+	[30151] = { -- Gloves of the Avatar
+		rank = 1,
+		source = "drop",
+		preciseSource = "Leotheras the BlindGloves of the Vanquished Defender - Serpentshrine Cavern"
+	},
+	[28508] = { -- Gloves of Saintly Blessings
+		rank = 2,
+		source = "drop",
+		preciseSource = "Attumen the Huntsman - Karazhan"
+	},
+	[29055] = { -- Handwraps of the Incarnate
+		rank = 3,
+		source = "drop",
+		preciseSource = "The CuratorGloves of the Fallen Defender - Karazhan"
+	},
+	[30036] = { -- Belt of the Long Road
+		rank = 1,
+		source = "crafted",
+		preciseSource = "Nether Vortex (2)Bolt of Imbued Netherweave (4)Primal Life (10)Rune Thread (2)Primal Water (10) - Serpentshrine Cavern BossesPattern: Belt of the Long Road"
+	},
+	[21873] = { -- Primal Mooncloth Belt
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Primal Mooncloth (4)Netherweb Spider Silk (2)Primal Life (8) - Nasmara MoonsongPattern: Primal Mooncloth Belt"
+	},
+	[30727] = { -- Gilded Trousers of Benediction
+		rank = 1,
+		source = "drop",
+		preciseSource = "Doomwalker - World BossShadowmoon Valley"
+	},
+	[30153] = { -- Breeches of the Avatar
+		rank = 2,
+		source = "drop",
+		preciseSource = "Fathom-Lord KarathressLeggings of the Vanquished Defender - Serpentshrine Cavern"
+	},
+	[29977] = { -- Star-Soul Breeches
+		rank = 3,
+		source = "drop",
+		preciseSource = "High Astromancer Solarian - The Eye"
+	},
+	[28742] = { -- Pantaloons of Repentance
+		rank = 4,
+		source = "drop",
+		preciseSource = "Netherspite - Karazhan"
+	},
+	[30543] = { -- Pontifex Kilt
+		rank = 5,
+		source = "drop",
+		preciseSource = "Warlord Kalithresh - The Steamvault"
+	},
+	[24261] = { -- Whitemend Pants
+		rank = 6,
+		source = "crafted",
+		preciseSource = "Primal Mooncloth (10)Primal Might (5)Primal Nether (1) - Dalliah the DoomsayerPattern: Whitemend Pants (1%)"
+	},
+	[31343] = { -- Kamaei's Cerulean Skirt
+		rank = 7,
+		source = "drop",
+		preciseSource = "World Drop"
+	},
+	[30100] = { -- Soul-Strider Boots
+		rank = 1,
+		source = "drop",
+		preciseSource = "Fathom-Lord Karathress - Serpentshrine Cavern"
+	},
+	[30035] = { -- Boots of the Long Road
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Primal Nether (2)Primal Mooncloth (4)Spellcloth (4)Rune Thread (2) - Serpentshrine Cavern BossesPattern: Boots of the Long Road"
+	},
+	[30680] = { -- Glider's Foot-Wraps of Healing
+		rank = 3,
+		source = "drop",
+		preciseSource = "Hyakiss the Lurker - Karazhan"
+	},
+	[28663] = { -- Boots of the Incorrupt
+		rank = 4,
+		source = "drop",
+		preciseSource = "Shade of Aran - Karazhan"
+	},
+	[29251] = { -- Boots of the Pious
+		rank = 5,
+		source = "drop",
+		preciseSource = "Pathaleon the Calculator  - The Mechanar "
+	},
+	[30018] = { -- Lord Sanguinar's Claim
+		rank = 1,
+		source = "drop",
+		preciseSource = "Kael'thas SunstriderVerdant Sphere - The Eye"
+	},
+	[28609] = { -- Emberspur Talisman
+		rank = 2,
+		source = "drop",
+		preciseSource = "Nightbane - Karazhan"
+	},
+	[30726] = { -- Archaic Charm of Presence
+		rank = 3,
+		source = "drop",
+		preciseSource = "Doomwalker - World BossShadowmoon Valley"
+	},
+	[28822] = { -- Teeth of Gruul
+		rank = 4,
+		source = "drop",
+		preciseSource = "Gruul the Dragonkiller - Gruul's Lair"
+	},
+	[30110] = { -- Coral Band of the Revived
+		rank = 1,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine Cavern"
+	},
+	[29920] = { -- Phoenix-Ring of Rebirth
+		rank = 2,
+		source = "drop",
+		preciseSource = "Al'ar - The Eye"
+	},
+	[30736] = { -- Ring of Flowing Light
+		rank = 3,
+		source = "drop",
+		preciseSource = "Doom Lord Kazzak - World BossHellfire Peninsula"
+	},
+	[28763] = { -- Jade Ring of the Everliving
+		rank = 4,
+		source = "drop",
+		preciseSource = "Prince Malchezaar - Karazhan"
+	},
+	[29290] = { -- Violet Signet of the Grand Restorer
+		rank = 5,
+		source = "vendor",
+		preciseSource = "The Violet Eye—Exalted - Archmage LerydaEminence Among the Violet Eye"
+	},
+	[28790] = { -- Naaru Lightwarden's Band
+		rank = 6,
+		source = "drop",
+		preciseSource = "MagtheridonMagtheridon's Head - Magtheridon's Lair"
+	},
+	[30665] = { -- Earring of Soulful Meditation
+		rank = 1,
+		source = "drop",
+		preciseSource = "The Lurker Below - Serpentshrine Cavern"
+	},
+	[30619] = { -- Fel Reaver's Piston
+		rank = 2,
+		source = "drop",
+		preciseSource = "Void Reaver - The Eye"
+	},
+	[28823] = { -- Eye of Gruul
+		rank = 3,
+		source = "drop",
+		preciseSource = "Gruul the Dragonkiller - Gruul's Lair"
+	},
+	[29376] = { -- Essence of the Martyr
+		rank = 4,
+		source = "drop",
+		preciseSource = "Badge of Justice (41) - G'eras"
+	},
+	[28590] = { -- Ribbon of Sacrifice
+		rank = 5,
+		source = "drop",
+		preciseSource = "Opera EventShared Loot - Karazhan"
+	},
+	[19288] = { -- Darkmoon Card: Blue Dragon
+		rank = 6,
+		source = "drop",
+		preciseSource = "Beasts DeckDarkmoon Beast Deck] - Darkmoon FaireWoW Classic"
+	},
+	[28190] = { -- Scarab of the Infinite Cycle
+		rank = 7,
+		source = "drop",
+		preciseSource = "Beasts Deck - The Black Morass"
+	},
+	[30108] = { -- Lightfathom Scepter
+		rank = 1,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine Cavern"
+	},
+	[29981] = { -- Ethereum Life-Staff
+		rank = 2,
+		source = "drop",
+		preciseSource = "High Astromancer Solarian - The Eye"
+	},
+	[32964] = { -- Merciless Gladiator's Salvation
+		rank = 3,
+		source = "vendor",
+		preciseSource = "1,850  - Arena Vendors"
+	},
+	[28771] = { -- Light's Justice
+		rank = 4,
+		source = "drop",
+		preciseSource = "Prince Malchezaar - Karazhan"
+	},
+	[30732] = { -- Exodar Life-Staff
+		rank = 5,
+		source = "drop",
+		preciseSource = "Doom Lord Kazzak - World BossHellfire Peninsula"
+	},
+	[30080] = { -- Luminescent Rod of the Naaru
+		rank = 1,
+		source = "drop",
+		preciseSource = "Morogrim Tidewalker - Serpentshrine Cavern"
+	},
+	[28588] = { -- Blue Diamond Witchwand
+		rank = 2,
+		source = "drop",
+		preciseSource = "Opera EventThe Crone - Karazhan"
+	},
+	[25295] = { -- Flawless Wand of Healing
+		rank = 3,
+		source = "drop",
+		preciseSource = "World Drop"
+	},
+	[29923] = { -- Talisman of the Sun King
+		rank = 1,
+		source = "drop",
+		preciseSource = "Al'ar - The Eye"
+	},
+	[29274] = { -- Tears of Heaven
+		rank = 2,
+		source = "drop",
+		preciseSource = "Badge of Justice (25) - G'eras"
+	},
+	[29170] = { -- Windcaller's Orb
+		rank = 3,
+		source = "vendor",
+		preciseSource = "Cenarion Expedition - Fedryen Swiftspear"
+	},
+
 }
 bisLists[3].PRIEST[2] = {
+	-- https://tbc.wowhead.com/guides/shadow-priest-dps-tk-ssc-phase-2-best-in-slot-gear-burning-crusade
+	[29986] = { -- Cowl of the Grand Engineer
+		rank = 1,
+		source = "drop",
+		preciseSource = "Void Reaver - The Eye"
+	},
+	[30161] = { -- Hood of the Avatar
+		rank = 2,
+		source = "drop",
+		preciseSource = "Lady VashjHelm of the Vanquished Defender - Serpentshrine Cavern"
+	},
+	[24266] = { -- Spellstrike Hood
+		rank = 3,
+		source = "crafted",
+		preciseSource = "Spellcloth (10)Primal Might (5)Primal Nether (1) - Grand Warlock NethekursePattern: Spellstrike Hood (5%)"
+	},
+	[29058] = { -- Soul-Collar of the Incarnate
+		rank = 4,
+		source = "drop",
+		preciseSource = "Prince MalchezaarHelm of the Fallen Defender - Karazhan"
+	},
+	[21869] = { -- Frozen Shadoweave Shoulders
+		rank = 1,
+		source = "crafted",
+		preciseSource = "Shadowcloth (4)Primal Water (10)Netherweb Spider Silk (2) - Andrion DarkspinnerPattern: Frozen Shadoweave Shoulders"
+	},
+	[30163] = { -- Wings of the Avatar
+		rank = 2,
+		source = "drop",
+		preciseSource = "Void ReaverPauldrons of the Vanquished Defender - The Eye"
+	},
+	[29992] = { -- Royal Cloak of the Sunstriders
+		rank = 1,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The Eye"
+	},
+	[31201] = { -- Illidari Cloak of Shadow Wrath
+		rank = 2,
+		source = "drop",
+		preciseSource = "Chief Engineer LorthanderRare - NetherstormMay be traded"
+	},
+	[25043] = { --  Amber Cape of Shadow Wrath
+		rank = 3,
+		source = "drop",
+		preciseSource = "World Drop"
+	},
+	[30107] = { -- Vestments of the Sea-Witch
+		rank = 1,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine Cavern"
+	},
+	[21871] = { -- Frozen Shadoweave Robe
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Shadowcloth (14)Primal Water (16)Netherweb Spider Silk (4) - Andrion DarkspinnerPattern: Frozen Shadoweave Robe"
+	},
+	[30159] = { -- Shroud of the Avatar
+		rank = 3,
+		source = "drop",
+		preciseSource = "Kael'thas SunstriderChestguard of the Vanquished Defender - The Eye"
+	},
+	[29056] = { -- Shroud of the Incarnate
+		rank = 4,
+		source = "drop",
+		preciseSource = "MagtheridonChestguard of the Fallen Defender - Magtheridon's Lair"
+	},
+	[30684] = { -- Ravager's Cuffs of Shadow Wrath
+		rank = 1,
+		source = "drop",
+		preciseSource = "Rokad the Ravager - KarazhanServant Quarters"
+	},
+	[24692] = { --  Elementalist Bracelets of Shadow Wrath
+		rank = 2,
+		source = "drop",
+		preciseSource = "World Drop"
+	},
+	[29918] = { -- Mindstorm Wristbands
+		rank = 3,
+		source = "drop",
+		preciseSource = "Al'ar - The Eye"
+	},
+	[28780] = { -- Soul-Eater's Handwraps
+		rank = 1,
+		source = "drop",
+		preciseSource = "Magtheridon - Magtheridon's Lair"
+	},
+	[28507] = { -- Handwraps of Flowing Thought
+		rank = 2,
+		source = "drop",
+		preciseSource = "Attumen the Huntsman - Karazhan"
+	},
+	[30725] = { -- Anger-Spark Gloves
+		rank = 3,
+		source = "drop",
+		preciseSource = "Doomwalker - World BossShadowmoon Valley"
+	},
+	[30160] = { -- Handguards of the Avatar
+		rank = 4,
+		source = "drop",
+		preciseSource = "Leotheras the BlindGloves of the Vanquished Defender - Serpentshrine Cavern"
+	},
+	[29972] = { -- Trousers of the Astromancer
+		rank = 1,
+		source = "drop",
+		preciseSource = "High Astromancer Solarian - The Eye"
+	},
+	[30734] = { -- Leggings of the Seventh Circle
+		rank = 2,
+		source = "drop",
+		preciseSource = "Doom Lord Kazzak - World BossHellfire Peninsula"
+	},
+	[30162] = { -- Leggings of the Avatar
+		rank = 3,
+		source = "drop",
+		preciseSource = "Fathom-Lord KarathressLeggings of the Vanquished Defender - Serpentshrine Cavern"
+	},
+	[24262] = { -- Spellstrike Pants
+		rank = 4,
+		source = "crafted",
+		preciseSource = "Spellcloth (10)Primal Might (5)Primal Nether (1) - MurmurPattern: Spellstrike Pants (5%)"
+	},
+	[30680] = { -- Glider's Foot-Wraps of Shadow Wrath
+		rank = 1,
+		source = "drop",
+		preciseSource = "Shadikith the Glider - KarazhanServant Quarters"
+	},
+	[21870] = { -- Frozen Shadoweave Boots
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Shadowcloth (8)Primal Water (12)Netherweb Spider Silk (2) - Andrion DarkspinnerPattern: Frozen Shadoweave Boots"
+	},
+	[29922] = { -- Band of Al'ar
+		rank = 2,
+		source = "drop",
+		preciseSource = "Al'ar - The Eye"
+	},
+	[30666] = { -- Ritssyn's Lost Pendant
+		rank = 1,
+		source = "drop",
+		preciseSource = "Trash mobs - Karazhan"
+	},
+	[21709] = { -- Ring of the Fallen God
+		rank = 3,
+		source = "drop",
+		preciseSource = "C'ThunEye of C'Thun - Temple of Ahn'QirajThe Savior of KalimdorWoW Classic"
+	},
+	[30109] = { -- Ring of Endless Coils
+		rank = 1,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine Cavern"
+	},
+	[23031] = { -- Band of the Inevitable
+		rank = 4,
+		source = "drop",
+		preciseSource = "Noth the Plaguebringer - NaxxramasWoW Classic"
+	},
+	[28793] = { -- Band of Crimson Fury
+		rank = 5,
+		source = "drop",
+		preciseSource = "MagtheridonMagtheridon's Head - Magtheridon's Lair"
+	},
+	[31856] = { -- Darkmoon Card: Crusade
+		rank = 1,
+		source = "quest",
+		preciseSource = " "
+	},
+	[23207] = { -- Mark of the Champion
+		rank = 2,
+		source = "drop",
+		preciseSource = "Kel'ThuzadThe Phylactery of Kel'Thuzad - NaxxramasThe Fall of Kel'ThuzadWoW Classic"
+	},
+	[29370] = { -- Icon of the Silver Crescent
+		rank = 3,
+		source = "drop",
+		preciseSource = "Badge of Justice (41) - G'eras"
+	},
+	[28789] = { -- Eye of Magtheridon
+		rank = 4,
+		source = "drop",
+		preciseSource = "Magtheridon - Magtheridon's Lair"
+	},
+	[27683] = { -- Quagmirran's Eye
+		rank = 5,
+		source = "drop",
+		preciseSource = "Quagmirran  - The Slave Pens "
+	},
+	[32963] = { -- Merciless Gladiator's Gavel
+		rank = 1,
+		source = "vendor",
+		preciseSource = "3,150  - Arena Vendors"
+	},
+	[30723] = { -- Talon of the Tempest
+		rank = 2,
+		source = "drop",
+		preciseSource = "Doomwalker - World BossShadowmoon Valley"
+	},
+	[28770] = { -- Nathrezim Mindblade
+		rank = 3,
+		source = "drop",
+		preciseSource = "Prince Malchezaar"
+	},
+	[29982] = { -- Wand of the Forgotten Star
+		rank = 1,
+		source = "drop",
+		preciseSource = "High Astromancer Solarian - The Eye"
+	},
+	[25295] = { -- Flawless Wand of Shadow Wrath
+		rank = 2,
+		source = "drop",
+		preciseSource = "World Drop"
+	},
+	[29272] = { -- Orb of the Soul-Eater
+		rank = 1,
+		source = "drop",
+		preciseSource = "Badge of Justice (25) - G'eras"
+	},
+
 }
 -- Phase 3
 bisLists[4].PRIEST[1] = {
@@ -1648,9 +2187,16 @@ bisLists[6].PRIEST[2] = {
 
 --------------------------------------------------------------------------------
 
-specialSpecNames.PRIEST = { "Healing", "DPS" }
-specIcons.PRIEST = { 3, 1 } -- Healer, Tank
---specIcons.PRIEST = { 3, 3, 2 } -- Healer, Healer, DPS
+specialSpecNames.PRIEST = {
+	{ "Healing", "DPS" }, -- Pre-Raid
+	{ "Healing", "DPS" }, -- Phase 1
+	{ "Healing", "DPS" }, -- Phase 2
+	{  }, -- Phase 3
+	{  }, -- Phase 4
+	{  } -- Phase 5
+}
+specIcons.PRIEST = { 3, 3, 2 } -- Healer, Healer, DPS
+specIcons["Healing"] = 3 -- Healer
 
 --[[----------------------------------------------------------------------------
 	#EOF

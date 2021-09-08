@@ -1637,8 +1637,1026 @@ bisLists[2].WARRIOR[2] = {
 }
 -- Phase 2
 bisLists[3].WARRIOR[1] = {
+	-- https://tbc.wowhead.com/guides/arms-warrior-dps-tk-ssc-phase-2-best-in-slot-gear-burning-crusade
+	[30120] = { -- Destroyer Battle-Helm
+		rank = 1,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine CavernHelm of the Vanquished Defender"
+	},
+	[32461] = { -- Furious Gizmatic Goggles
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Furious Gizmatic Goggles - Engineering"
+	},
+	[29021] = { -- Warbringer Battle-Helm
+		rank = 3,
+		source = "drop",
+		preciseSource = "Prince Malchezaar- KarazhanHelm of the Fallen Defender"
+	},
+	[32087] = { -- Mask of the Deceiver
+		rank = 4,
+		source = "vendor",
+		preciseSource = "G'eras - 50 Badge of Justice"
+	},
+	[29983] = { -- Fel-Steel Warhelm
+		rank = 5,
+		source = "drop",
+		preciseSource = "Void Reaver - The Eye"
+	},
+	[30055] = { -- Shoulderpads of the Stranger
+		rank = 1,
+		source = "drop",
+		preciseSource = "Hydross the Unstable - Serpentshrine Cavern"
+	},
+	[30122] = { -- Destroyer Shoulderblades
+		rank = 2,
+		source = "drop",
+		preciseSource = "Void Reaver - The EyePauldrons of the Vanquished Defender"
+	},
+	[30053] = { -- Pauldrons of the Wardancer
+		rank = 3,
+		source = "drop",
+		preciseSource = "Hydross the Unstable - Serpentshrine Cavern"
+	},
+	[30740] = { -- Ripfiend Shoulderplates
+		rank = 4,
+		source = "drop",
+		preciseSource = "Doom Lord Kazzak - Hellfire Peninsula"
+	},
+	[29023] = { -- Warbringer Shoulderplates
+		rank = 5,
+		source = "drop",
+		preciseSource = "High King Maulgar - Gruul's LairPauldrons of the Fallen Defender"
+	},
+	[33173] = { -- Ragesteel Shoulders
+		rank = 6,
+		source = "crafted",
+		preciseSource = "Ragesteel Shoulders - Blacksmithing"
+	},
+	[30729] = { -- Black-Iron Battlecloak
+		rank = 1,
+		source = "drop",
+		preciseSource = "Doomwalker - Shadowmoon Valley"
+	},
+	[24259] = { -- Vengeance Wrap
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Pattern: Vengeance Wrap"
+	},
+	[29994] = { -- Thalassian Wildercloak
+		rank = 3,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The Eye"
+	},
+	[30098] = { -- Razor-Scale Battlecloak
+		rank = 4,
+		source = "drop",
+		preciseSource = "Morogrim Tidewalker - Serpentshrine Cavern"
+	},
+	[30118] = { -- Destroyer Breastplate
+		rank = 1,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The EyeChestguard of the Vanquished Defender"
+	},
+	[30101] = { -- Bloodsea Brigand's Vest
+		rank = 2,
+		source = "drop",
+		preciseSource = "Fathom-Lord Karathress - Serpentshrine Cavern"
+	},
+	[30102] = { -- Krakken-Heart Breastplate
+		rank = 3,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine Cavern"
+	},
+	[30730] = { -- Terrorweave Tunic
+		rank = 4,
+		source = "drop",
+		preciseSource = "Doomwalker - Shadowmoon Valley"
+	},
+	[29019] = { -- Warbringer Breastplate
+		rank = 5,
+		source = "drop",
+		preciseSource = "Magtheridon - Magtheridon's LairChestguard of the Fallen Defender"
+	},
+	[30057] = { -- Bracers of Eradication
+		rank = 1,
+		source = "drop",
+		preciseSource = "The Lurker Below - Serpentshrine Cavern"
+	},
+	[28795] = { -- Bladespire Warbands
+		rank = 2,
+		source = "drop",
+		preciseSource = "High King Maulgar - Gruul's Lair"
+	},
+	[30091] = { -- True-Aim Stalker Bands
+		rank = 3,
+		source = "drop",
+		preciseSource = "Leotheras the Blind - Serpentshrine Cavern"
+	},
+	[28824] = { -- Gauntlets of Martial Perfection
+		rank = 1,
+		source = "drop",
+		preciseSource = "Gruul the Dragonkiller - Gruul's Lair"
+	},
+	[29947] = { -- Gloves of the Searing Grip
+		rank = 2,
+		source = "drop",
+		preciseSource = "Al'ar - The Eye"
+	},
+	[28776] = { -- Liar's Tongue Gloves
+		rank = 3,
+		source = "drop",
+		preciseSource = "Magtheridon - Magtheridon's Lair"
+	},
+	[30119] = { -- Destroyer Gauntlets
+		rank = 4,
+		source = "drop",
+		preciseSource = "Leotheras the Blind - Serpentshrine CavernGloves of the Vanquished Defender"
+	},
+	[30106] = { -- Belt of One-Hundred Deaths
+		rank = 1,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine Cavern"
+	},
+	[30032] = { -- Red Belt of Battle
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Red Belt of Battle - Blacksmithing"
+	},
+	[28779] = { -- Girdle of the Endless Pit
+		rank = 3,
+		source = "drop",
+		preciseSource = "Magtheridon - Magtheridon's Lair"
+	},
+	[29995] = { -- Leggings of Murderous Intent
+		rank = 1,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The Eye"
+	},
+	[29950] = { -- Greaves of the Bloodwarder
+		rank = 2,
+		source = "drop",
+		preciseSource = "High Astromancer Solarian - The Eye"
+	},
+	[30121] = { -- Destroyer Greaves
+		rank = 3,
+		source = "drop",
+		preciseSource = "Fathom-Lord Karathress - Serpentshrine CavernLeggings of the Vanquished Defender"
+	},
+	[30538] = { -- Midnight Legguards
+		rank = 4,
+		source = "drop",
+		preciseSource = "Quagmirran - The Slave Pens"
+	},
+	[30081] = { -- Warboots of Obliteration
+		rank = 1,
+		source = "drop",
+		preciseSource = "Morogrim Tidewalker - Serpentshrine Cavern"
+	},
+	[29951] = { -- Star-Strider Boots
+		rank = 2,
+		source = "drop",
+		preciseSource = "High Astromancer Solarian - The Eye"
+	},
+	[28608] = { -- Ironstriders of Urgency
+		rank = 3,
+		source = "drop",
+		preciseSource = "Nightbane - Karazhan"
+	},
+	[30022] = { -- Pendant of the Perilous
+		rank = 1,
+		source = "drop",
+		preciseSource = "Serpentshrine Cavern - Trash Drop"
+	},
+	[30017] = { -- Telonicus' Pendant of Mayhem
+		rank = 2,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The EyeVerdant Sphere"
+	},
+	[30059] = { -- Choker of Animalistic Fury
+		rank = 3,
+		source = "drop",
+		preciseSource = "The Lurker Below - Serpentshrine Cavern"
+	},
+	[29349] = { -- Adamantine Chain of the Unbroken
+		rank = 4,
+		source = "drop",
+		preciseSource = "Quagmirran - The Slave Pens "
+	},
+	[29381] = { -- Choker of Vile Intent
+		rank = 5,
+		source = "vendor",
+		preciseSource = "G'eras - 25 Badge of Justice"
+	},
+	[29997] = { -- Band of the Ranger-General
+		rank = 1,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The Eye"
+	},
+	[30061] = { -- Ancestral Ring of Conquest
+		rank = 2,
+		source = "drop",
+		preciseSource = "The Lurker Below - Serpentshrine Cavern"
+	},
+	[30052] = { -- Ring of Lethality
+		rank = 3,
+		source = "drop",
+		preciseSource = "Hydross the Unstable - Serpentshrine Cavern"
+	},
+	[30738] = { -- Ring of Reciprocity
+		rank = 4,
+		source = "drop",
+		preciseSource = "Doom Lord Kazzak - Hellfire Peninsula"
+	},
+	[28730] = { -- Mithril Band of the Unscarred
+		rank = 5,
+		source = "drop",
+		preciseSource = "Netherspite - Karazhan"
+	},
+	[28757] = { -- Ring of a Thousand Marks
+		rank = 6,
+		source = "drop",
+		preciseSource = "Prince Malchezaar - Karazhan"
+	},
+	[31920] = { -- Shaffar's Band of Brutality
+		rank = 7,
+		source = "drop",
+		preciseSource = "Yor - Mana-Tombs"
+	},
+	[29379] = { -- Ring of Arathi Warlords
+		rank = 8,
+		source = "vendor",
+		preciseSource = "G'eras - 25 Badge of Justice"
+	},
+	[30834] = { -- Shapeshifter's Signet
+		rank = 9,
+		source = "vendor",
+		preciseSource = "Lower City - Exalted"
+	},
+	[28830] = { -- Dragonspine Trophy
+		rank = 1,
+		source = "drop",
+		preciseSource = "Gruul the Dragonkiller - Gruul's Lair"
+	},
+	[30627] = { -- Tsunami Talisman
+		rank = 2,
+		source = "drop",
+		preciseSource = "Leotheras the Blind - Serpentshrine Cavern"
+	},
+	[29383] = { -- Bloodlust Brooch
+		rank = 3,
+		source = "vendor",
+		preciseSource = "G'eras - 41 Badge of Justice"
+	},
+	[30446] = { -- Solarian's Sapphire
+		rank = 4,
+		source = "drop",
+		preciseSource = "High Astromancer Solarian - The Eye"
+	},
+	[28034] = { -- Hourglass of the Unraveller
+		rank = 5,
+		source = "drop",
+		preciseSource = "Temporus - The Black Morass"
+	},
+	[21670] = { -- Badge of the Swarmguard
+		rank = 6,
+		source = "drop",
+		preciseSource = "Battleguard Sartura - Temple of Ahn'Qiraj"
+	},
+	[29993] = { -- Twinblade of the Phoenix
+		rank = 1,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The Eye"
+	},
+	[28430] = { -- Lionheart Executioner
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Lionheart Executioner - Master Swordsmith"
+	},
+	[28436] = { -- Bloodmoon
+		rank = 3,
+		source = "crafted",
+		preciseSource = "Bloodmoon - Master Axesmith"
+	},
+	[31984] = { -- Merciless Gladiator's Greatsword
+		rank = 4,
+		source = "vendor",
+		preciseSource = "PVP Vendor"
+	},
+	[28573] = { -- Despair
+		rank = 5,
+		source = "drop",
+		preciseSource = "Julianne - Karazhan"
+	},
+	[30105] = { -- Serpent Spine Longbow
+		rank = 1,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine Cavern"
+	},
+	[30724] = { -- Barrel-Blade Longrifle
+		rank = 2,
+		source = "drop",
+		preciseSource = "Doomwalker - Shadowmoon Valley"
+	},
+	[28772] = { -- Sunfury Bow of the Phoenix
+		rank = 3,
+		source = "drop",
+		preciseSource = "Prince Malchezaar - Karazhan"
+	},
+	[30279] = { -- Mama's Insurance
+		rank = 4,
+		source = "quest",
+		preciseSource = "Declawing Doomclaw - Netherstorm"
+	},
+
 }
 bisLists[3].WARRIOR[2] = {
+	-- https://tbc.wowhead.com/guides/fury-warrior-dps-tk-ssc-phase-2-best-in-slot-gear-burning-crusade
+	[30120] = { -- Destroyer Battle-Helm
+		rank = 1,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine CavernHelm of the Vanquished Defender"
+	},
+	[29021] = { -- Warbringer Battle-Helm
+		rank = 3,
+		source = "drop",
+		preciseSource = "Prince Malchezaar- KarazhanHelm of the Fallen Defender"
+	},
+	[32087] = { -- Mask of the Deceiver
+		rank = 4,
+		source = "vendor",
+		preciseSource = "G'eras - 50 Badge of Justice"
+	},
+	[32461] = { -- Furious Gizmatic Goggles
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Furious Gizmatic Goggles - Engineering"
+	},
+	[30122] = { -- Destroyer Shoulderblades
+		rank = 2,
+		source = "drop",
+		preciseSource = "Void Reaver - The EyePauldrons of the Vanquished Defender"
+	},
+	[30055] = { -- Shoulderpads of the Stranger
+		rank = 1,
+		source = "drop",
+		preciseSource = "Hydross the Unstable - Serpentshrine Cavern"
+	},
+	[29983] = { -- Fel-Steel Warhelm
+		rank = 5,
+		source = "drop",
+		preciseSource = "Void Reaver - The Eye"
+	},
+	[30053] = { -- Pauldrons of the Wardancer
+		rank = 3,
+		source = "drop",
+		preciseSource = "Hydross the Unstable - Serpentshrine Cavern"
+	},
+	[30740] = { -- Ripfiend Shoulderplates
+		rank = 4,
+		source = "drop",
+		preciseSource = "Doom Lord Kazzak - Hellfire Peninsula"
+	},
+	[29023] = { -- Warbringer Shoulderplates
+		rank = 5,
+		source = "drop",
+		preciseSource = "High King Maulgar - Gruul's LairPauldrons of the Fallen Defender"
+	},
+	[33173] = { -- Ragesteel Shoulders
+		rank = 6,
+		source = "crafted",
+		preciseSource = "Ragesteel Shoulders - Blacksmithing"
+	},
+	[30729] = { -- Black-Iron Battlecloak
+		rank = 1,
+		source = "drop",
+		preciseSource = "Doomwalker - Shadowmoon Valley"
+	},
+	[24259] = { -- Vengeance Wrap
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Pattern: Vengeance Wrap"
+	},
+	[29994] = { -- Thalassian Wildercloak
+		rank = 3,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The Eye"
+	},
+	[30098] = { -- Razor-Scale Battlecloak
+		rank = 4,
+		source = "drop",
+		preciseSource = "Morogrim Tidewalker - Serpentshrine Cavern"
+	},
+	[30118] = { -- Destroyer Breastplate
+		rank = 1,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The EyeChestguard of the Vanquished Defender"
+	},
+	[30101] = { -- Bloodsea Brigand's Vest
+		rank = 2,
+		source = "drop",
+		preciseSource = "Fathom-Lord Karathress - Serpentshrine Cavern"
+	},
+	[30102] = { -- Krakken-Heart Breastplate
+		rank = 3,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine Cavern"
+	},
+	[30730] = { -- Terrorweave Tunic
+		rank = 4,
+		source = "drop",
+		preciseSource = "Doomwalker - Shadowmoon Valley"
+	},
+	[29019] = { -- Warbringer Breastplate
+		rank = 5,
+		source = "drop",
+		preciseSource = "Magtheridon - Magtheridon's LairChestguard of the Fallen Defender"
+	},
+	[30057] = { -- Bracers of Eradication
+		rank = 1,
+		source = "drop",
+		preciseSource = "The Lurker Below - Serpentshrine Cavern"
+	},
+	[28795] = { -- Bladespire Warbands
+		rank = 2,
+		source = "drop",
+		preciseSource = "High King Maulgar - Gruul's Lair"
+	},
+	[30091] = { -- True-Aim Stalker Bands
+		rank = 3,
+		source = "drop",
+		preciseSource = "Leotheras the Blind - Serpentshrine Cavern"
+	},
+	[28824] = { -- Gauntlets of Martial Perfection
+		rank = 1,
+		source = "drop",
+		preciseSource = "Gruul the Dragonkiller - Gruul's Lair"
+	},
+	[29947] = { -- Gloves of the Searing Grip
+		rank = 2,
+		source = "drop",
+		preciseSource = "Al'ar - The Eye"
+	},
+	[28776] = { -- Liar's Tongue Gloves
+		rank = 3,
+		source = "drop",
+		preciseSource = "Magtheridon - Magtheridon's Lair"
+	},
+	[30119] = { -- Destroyer Gauntlets
+		rank = 4,
+		source = "drop",
+		preciseSource = "Leotheras the Blind - Serpentshrine CavernGloves of the Vanquished Defender"
+	},
+	[30106] = { -- Belt of One-Hundred Deaths
+		rank = 1,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine Cavern"
+	},
+	[30032] = { -- Red Belt of Battle
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Red Belt of Battle - Blacksmithing"
+	},
+	[28779] = { -- Girdle of the Endless Pit
+		rank = 3,
+		source = "drop",
+		preciseSource = "Magtheridon - Magtheridon's Lair"
+	},
+	[29995] = { -- Leggings of Murderous Intent
+		rank = 1,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The Eye"
+	},
+	[29950] = { -- Greaves of the Bloodwarder
+		rank = 2,
+		source = "drop",
+		preciseSource = "High Astromancer Solarian - The Eye"
+	},
+	[30538] = { -- Midnight Legguards
+		rank = 4,
+		source = "drop",
+		preciseSource = "Quagmirran - The Slave Pens"
+	},
+	[30121] = { -- Destroyer Greaves
+		rank = 3,
+		source = "drop",
+		preciseSource = "Fathom-Lord Karathress - Serpentshrine CavernLeggings of the Vanquished Defender"
+	},
+	[30081] = { -- Warboots of Obliteration
+		rank = 1,
+		source = "drop",
+		preciseSource = "Morogrim Tidewalker - Serpentshrine Cavern"
+	},
+	[29951] = { -- Star-Strider Boots
+		rank = 2,
+		source = "drop",
+		preciseSource = "High Astromancer Solarian - The Eye"
+	},
+	[28608] = { -- Ironstriders of Urgency
+		rank = 3,
+		source = "drop",
+		preciseSource = "Nightbane - Karazhan"
+	},
+	[30022] = { -- Pendant of the Perilous
+		rank = 1,
+		source = "drop",
+		preciseSource = "Serpentshrine Cavern - Trash Drop"
+	},
+	[30017] = { -- Telonicus' Pendant of Mayhem
+		rank = 2,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The EyeVerdant Sphere"
+	},
+	[30059] = { -- Choker of Animalistic Fury
+		rank = 3,
+		source = "drop",
+		preciseSource = "The Lurker Below - Serpentshrine Cavern"
+	},
+	[29349] = { -- Adamantine Chain of the Unbroken
+		rank = 4,
+		source = "drop",
+		preciseSource = "Quagmirran - The Slave Pens "
+	},
+	[29381] = { -- Choker of Vile Intent
+		rank = 5,
+		source = "vendor",
+		preciseSource = "G'eras - 25 Badge of Justice"
+	},
+	[29997] = { -- Band of the Ranger-General
+		rank = 1,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The Eye"
+	},
+	[30061] = { -- Ancestral Ring of Conquest
+		rank = 2,
+		source = "drop",
+		preciseSource = "The Lurker Below - Serpentshrine Cavern"
+	},
+	[30052] = { -- Ring of Lethality
+		rank = 3,
+		source = "drop",
+		preciseSource = "Hydross the Unstable - Serpentshrine Cavern"
+	},
+	[30738] = { -- Ring of Reciprocity
+		rank = 4,
+		source = "drop",
+		preciseSource = "Doom Lord Kazzak - Hellfire Peninsula"
+	},
+	[28730] = { -- Mithril Band of the Unscarred
+		rank = 5,
+		source = "drop",
+		preciseSource = "Netherspite - Karazhan"
+	},
+	[28757] = { -- Ring of a Thousand Marks
+		rank = 6,
+		source = "drop",
+		preciseSource = "Prince Malchezaar - Karazhan"
+	},
+	[31920] = { -- Shaffar's Band of Brutality
+		rank = 7,
+		source = "drop",
+		preciseSource = "Yor - Mana-Tombs"
+	},
+	[29379] = { -- Ring of Arathi Warlords
+		rank = 8,
+		source = "vendor",
+		preciseSource = "G'eras - 25 Badge of Justice"
+	},
+	[30834] = { -- Shapeshifter's Signet
+		rank = 9,
+		source = "vendor",
+		preciseSource = "Lower City - Exalted"
+	},
+	[28830] = { -- Dragonspine Trophy
+		rank = 1,
+		source = "drop",
+		preciseSource = "Gruul the Dragonkiller - Gruul's Lair"
+	},
+	[30627] = { -- Tsunami Talisman
+		rank = 2,
+		source = "drop",
+		preciseSource = "Leotheras the Blind - Serpentshrine Cavern"
+	},
+	[29383] = { -- Bloodlust Brooch
+		rank = 3,
+		source = "vendor",
+		preciseSource = "G'eras - 41 Badge of Justice"
+	},
+	[28034] = { -- Hourglass of the Unraveller
+		rank = 4,
+		source = "drop",
+		preciseSource = "Temporus - The Black Morass"
+	},
+	[21670] = { -- Badge of the Swarmguard
+		rank = 5,
+		source = "drop",
+		preciseSource = "Battleguard Sartura - Temple of Ahn'Qiraj"
+	},
+	[28439] = { -- Dragonstrike
+		rank = 1,
+		source = "crafted",
+		preciseSource = "Dragonstrike - Master Hammersmith"
+	},
+	[28438] = { -- Dragonmaw
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Dragonmaw - Master Hammersmith"
+	},
+	[29996] = { -- Rod of the Sun King
+		rank = 3,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The Eye"
+	},
+	[30082] = { -- Talon of Azshara
+		rank = 4,
+		source = "drop",
+		preciseSource = "Morogrim Tidewalker - Serpentshrine Cavern"
+	},
+	[32052] = { -- Merciless Gladiator's Slicer
+		rank = 5,
+		source = "vendor",
+		preciseSource = "PVP Vendor"
+	},
+	[29996] = { -- Rod of the Sun King
+		rank = 1,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The Eye"
+	},
+	[30082] = { -- Talon of Azshara
+		rank = 2,
+		source = "drop",
+		preciseSource = "Morogrim Tidewalker - Serpentshrine Cavern"
+	},
+	[32052] = { -- Merciless Gladiator's Slicer
+		rank = 3,
+		source = "vendor",
+		preciseSource = "PVP Vendor"
+	},
+	[29924] = { -- Netherbane
+		rank = 4,
+		source = "drop",
+		preciseSource = "Al'ar - The Eye"
+	},
+	[30105] = { -- Serpent Spine Longbow
+		rank = 1,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine Cavern"
+	},
+	[30724] = { -- Barrel-Blade Longrifle
+		rank = 2,
+		source = "drop",
+		preciseSource = "Doomwalker - Shadowmoon Valley"
+	},
+	[28772] = { -- Sunfury Bow of the Phoenix
+		rank = 3,
+		source = "drop",
+		preciseSource = "Prince Malchezaar - Karazhan"
+	},
+	[30279] = { -- Mama's Insurance
+		rank = 4,
+		source = "quest",
+		preciseSource = "Declawing Doomclaw - Netherstorm"
+	},
+
+}
+bisLists[3].WARRIOR[3] = {
+	-- https://tbc.wowhead.com/guides/protection-warrior-tank-tk-ssc-phase-2-best-in-slot-gear-burning-crusade
+	[32473] = { -- Tankatronic Goggles
+		rank = 1,
+		source = "crafted",
+		preciseSource = "Tankatronic Goggles"
+	},
+	[30488] = { -- Merciless Gladiator's Plate Helm
+		rank = 2,
+		source = "vendor",
+		preciseSource = "1875  - Arena Vendor"
+	},
+	[30115] = { -- Destroyer Greathelm
+		rank = 3,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine Cavern"
+	},
+	[30120] = { -- Destroyer Battle-Helm
+		rank = 4,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine Cavern"
+	},
+	[30122] = { -- Destroyer Shoulderblades
+		rank = 2,
+		source = "drop",
+		preciseSource = "Void Reaver - The Eye"
+	},
+	[30117] = { -- Destroyer Shoulderguards
+		rank = 1,
+		source = "drop",
+		preciseSource = "Void Reaver - The Eye"
+	},
+	[30490] = { -- Merciless Gladiator's Plate Shoulders
+		rank = 3,
+		source = "vendor",
+		preciseSource = "1500  - Arena Vendor"
+	},
+	[28529] = { -- Royal Cloak of Arathi Kings
+		rank = 1,
+		source = "drop",
+		preciseSource = "Moroes - Karazhan"
+	},
+	[28672] = { -- Drape of the Dark Reavers
+		rank = 2,
+		source = "drop",
+		preciseSource = "Shade of Aran - Karazhan"
+	},
+	[29994] = { -- Thalassian Wildercloak
+		rank = 3,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The Eye"
+	},
+	[29925] = { -- Phoenix-Wing Cloak
+		rank = 4,
+		source = "drop",
+		preciseSource = "Al'ar - The Eye"
+	},
+	[30113] = { -- Destroyer Chestguard
+		rank = 1,
+		source = "drop",
+		preciseSource = "Fathom-Lord Karathress - Serpentshrine Cavern"
+	},
+	[28485] = { -- Bulwark of the Ancient Kings
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Bulwark of the Ancient Kings"
+	},
+	[30486] = { -- Merciless Gladiator's Plate Chestpiece
+		rank = 3,
+		source = "vendor",
+		preciseSource = "1875  - Arena Vendor"
+	},
+	[32818] = { -- Veteran's Plate Bracers
+		rank = 1,
+		source = "vendor",
+		preciseSource = "11794  20 Warsong Gulch Mark of Honor - Faction Capital"
+	},
+	[28996] = { -- Marshal's Plate Bracers
+		rank = 2,
+		source = "vendor",
+		preciseSource = "11794  20 Warsong Gulch Mark of Honor - Faction Capital"
+	},
+	[28502] = { -- Vambraces of Courage
+		rank = 3,
+		source = "drop",
+		preciseSource = "Attumen the Huntsman - Karazhan"
+	},
+	[28795] = { -- Bladespire Warbands
+		rank = 4,
+		source = "drop",
+		preciseSource = "High King Maulgar - Gruul's Lair"
+	},
+	[30114] = { -- Destroyer Handguards
+		rank = 1,
+		source = "drop",
+		preciseSource = "Leotheras the Blind - Serpentshrine Cavern"
+	},
+	[29998] = { -- Royal Gauntlets of Silvermoon
+		rank = 2,
+		source = "drop",
+		preciseSource = "Kael'thas Sunstrider - The Eye"
+	},
+	[29947] = { -- Gloves of the Searing Grip
+		rank = 3,
+		source = "drop",
+		preciseSource = "Al'ar - The Eye"
+	},
+	[30644] = { -- Grips of Deftness
+		rank = 4,
+		source = "drop",
+		preciseSource = "Zone Drop - Karazhan"
+	},
+	[30106] = { -- Belt of One-Hundred Deaths
+		rank = 1,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine Cavern"
+	},
+	[30096] = { -- Girdle of the Invulnerable
+		rank = 2,
+		source = "drop",
+		preciseSource = "Leotheras the Blind - Serpentshrine Cavern"
+	},
+	[32805] = { -- Veteran's Plate Belt
+		rank = 3,
+		source = "vendor",
+		preciseSource = "17850  40 Arathi Basin Mark of Honor - Faction Capital"
+	},
+	[30032] = { -- Red Belt of Battle
+		rank = 4,
+		source = "crafted",
+		preciseSource = "Red Belt of Battle"
+	},
+	[30116] = { -- Destroyer Legguards
+		rank = 1,
+		source = "drop",
+		preciseSource = "Fathom-Lord Karathress - Serpentshrine Cavern"
+	},
+	[29950] = { -- Greaves of the Bloodwarder
+		rank = 2,
+		source = "drop",
+		preciseSource = "High Astromancer Solarian - The Eye"
+	},
+	[30489] = { -- Merciless Gladiator's Plate Legguards
+		rank = 3,
+		source = "vendor",
+		preciseSource = "1875  - Arena Vendor"
+	},
+	[30121] = { -- Destroyer Greaves
+		rank = 4,
+		source = "drop",
+		preciseSource = "Fathom-Lord Karathress - Serpentshrine Cavern"
+	},
+	[32793] = { -- Veteran's Plate Greaves
+		rank = 1,
+		source = "vendor",
+		preciseSource = "17850  40 Eye of the Storm Mark of Honor - Faction Capital"
+	},
+	[32267] = { -- Boots of the Resilient
+		rank = 2,
+		source = "drop",
+		preciseSource = "High Astromancer Solarian - The Eye"
+	},
+	[28608] = { -- Ironstriders of Urgency
+		rank = 3,
+		source = "drop",
+		preciseSource = "Nightbane - Karazhan"
+	},
+	[30099] = { -- Frayed Tether of the Drowned
+		rank = 1,
+		source = "drop",
+		preciseSource = "Fathom-Lord Karathress - Serpentshrine Cavern"
+	},
+	[33066] = { -- Veteran's Pendant of Triumph
+		rank = 2,
+		source = "vendor",
+		preciseSource = "15300  10 Eye of the Storm Mark of Honor - Faction Capital"
+	},
+	[35511] = { -- Hailstone Pendant
+		rank = 3,
+		source = "drop",
+		preciseSource = "Ice Chest - The Slave Pens"
+	},
+	[28674] = { -- Saberclaw Talisman
+		rank = 4,
+		source = "drop",
+		preciseSource = "Shade of Aran - Karazhan"
+	},
+	[29279] = { -- Violet Signet of the Great Protector
+		rank = 1,
+		source = "vendor",
+		preciseSource = "The Violet Eye (Exalted) - Archmage Leryda"
+	},
+	[30834] = { -- Shapeshifter's Signet
+		rank = 2,
+		source = "vendor",
+		preciseSource = "Lower City (Exalted) - Nakodu"
+	},
+	[28675] = { -- Shermanar Great-Ring
+		rank = 3,
+		source = "drop",
+		preciseSource = "Shade of Aran - Karazhan"
+	},
+	[28792] = { -- A'dal's Signet of Defense
+		rank = 4,
+		source = "drop",
+		preciseSource = "Magtheridon's Head - Magtheridon"
+	},
+	[29283] = { -- Violet Signet of the Master Assassin
+		rank = 5,
+		source = "vendor",
+		preciseSource = "The Violet Eye (Exalted) - Archmage Leryda"
+	},
+	[30061] = { -- Ancestral Ring of Conquest
+		rank = 6,
+		source = "drop",
+		preciseSource = "The Lurker Below - Serpentshrine Cavern"
+	},
+	[23836] = { -- Goblin Rocket Launcher
+		rank = 1,
+		source = "crafted",
+		preciseSource = "Goblin Rocket Launcher"
+	},
+	[23835] = { -- Gnomish Poultryizer
+		rank = 2,
+		source = "crafted",
+		preciseSource = "Gnomish Poultryizer"
+	},
+	[30620] = { -- Spyglass of the Hidden Fleet
+		rank = 3,
+		source = "drop",
+		preciseSource = "Zone drop - Serpentshrine Cavern"
+	},
+	[27770] = { -- Argussian Compass
+		rank = 4,
+		source = "drop",
+		preciseSource = "The Black Stalker - The Underbog (Heroic)"
+	},
+	[31113] = { -- Violet Badge
+		rank = 5,
+		source = "quest",
+		preciseSource = "The New Directive"
+	},
+	[29181] = { -- Timelapse Shard
+		rank = 6,
+		source = "vendor",
+		preciseSource = "Keepers of Time (Exalted) - Alurmi"
+	},
+	[28121] = { -- Icon of Unyielding Courage
+		rank = 7,
+		source = "drop",
+		preciseSource = "Keli'dan the Breaker - The Blood Furnace (Heroic)"
+	},
+	[28579] = { -- Romulo's Poison Vial
+		rank = 8,
+		source = "drop",
+		preciseSource = "Julianne - Karazhan"
+	},
+	[29387] = { -- Gnomeregan Auto-Dodger 600
+		rank = 9,
+		source = "vendor",
+		preciseSource = "41 Badge of Justice - G'eras"
+	},
+	[30058] = { -- Mallet of the Tides
+		rank = 1,
+		source = "drop",
+		preciseSource = "The Lurker Below - Serpentshrine Cavern"
+	},
+	[30103] = { -- Fang of Vashj
+		rank = 2,
+		source = "drop",
+		preciseSource = "Lady Vashj - Serpentshrine Cavern"
+	},
+	[28427] = { -- Blazefury
+		rank = 3,
+		source = "crafted",
+		preciseSource = "Blazefury"
+	},
+	[29165] = { -- Warbringer
+		rank = 4,
+		source = "vendor",
+		preciseSource = "Thrallmar (Exalted) - Hellfire Peninsula"
+	},
+	[28749] = { -- King's Defender
+		rank = 5,
+		source = "drop",
+		preciseSource = "Dust Covered Chest - Karazhan"
+	},
+	[29362] = { -- The Sun Eater
+		rank = 6,
+		source = "drop",
+		preciseSource = "Pathaleon the Calculator - The Mechanar (Heroic)"
+	},
+	[28825] = { -- Aldori Legacy Defender
+		rank = 1,
+		source = "drop",
+		preciseSource = "Gruul the Dragonkiller - Gruul's Lair"
+	},
+	[32045] = { -- Merciless Gladiator's Shield Wall
+		rank = 2,
+		source = "vendor",
+		preciseSource = "1875  - Arena Vendor"
+	},
+	[28358] = { -- Gladiator's Shield Wall
+		rank = 3,
+		source = "vendor",
+		preciseSource = "1875  - Arena Vendor"
+	},
+	[28606] = { -- Shield of Impenetrable Darkness
+		rank = 4,
+		source = "drop",
+		preciseSource = "Nightbane - Karazhan"
+	},
+	[30724] = { -- Barrel-Blade Longrifle
+		rank = 1,
+		source = "drop",
+		preciseSource = "Doomwalker (World Boss) - Shadowmoon Valley"
+	},
+	[32054] = { -- Merciless Gladiator's War Edge
+		rank = 2,
+		source = "vendor",
+		preciseSource = "1000  - Arena Vendor"
+	},
+	[30025] = { -- Serpentshrine Shuriken
+		rank = 3,
+		source = "drop",
+		preciseSource = "Zone drop - Serpentshrine Cavern"
+	},
+	[32645] = { -- Crystalline Crossbow
+		rank = 4,
+		source = "vendor",
+		preciseSource = "Ogri'la (Exalted) - Blade's Edge Mountains"
+	},
+	[28826] = { -- Shuriken of Negation
+		rank = 5,
+		source = "drop",
+		preciseSource = "Gruul the Dragonkiller - Gruul's Lair"
+	},
+
 }
 -- Phase 3
 bisLists[4].WARRIOR[1] = {
@@ -1658,9 +2676,15 @@ bisLists[6].WARRIOR[2] = {
 
 --------------------------------------------------------------------------------
 
-specialSpecNames.WARRIOR = { "DPS", "Tank" }
-specIcons.WARRIOR = { 2, 1 } -- DPS, Tank
---specIcons.WARRIOR = { 2, 2, 1 } -- DPS, DPS, Tank
+specialSpecNames.WARRIOR = {
+	{ "DPS", "Tank" }, -- Pre-Raid
+	{ "DPS", "Tank" }, -- Phase 1
+	{  }, -- Phase 2
+	{  }, -- Phase 3
+	{  }, -- Phase 4
+	{  } -- Phase 5
+}
+specIcons.WARRIOR = { 2, 2, 1 } -- DPS, DPS, Tank
 
 --[[----------------------------------------------------------------------------
 	#EOF

@@ -67,14 +67,23 @@ local _G = _G
 local db, specNames, topSpec
 local className, classFilename = UnitClass("player")
 
-local currentPhase = 1 -- Current Phase out of possible 5
+local currentPhase = 2 -- Current Phase out of possible 5
 currentPhase = currentPhase + 1 -- Current Phase + 1 for Pre-Raid-phase
 local phaseNames = private.phaseNames
 local phaseRaidLists = private.phaseRaidLists
 local bisLists = private.bisLists
 local specialSpecNames = private.specialSpecNames
 local specIcons = private.specIcons
-local numberOfSpecs = (specialSpecNames[classFilename] and #specialSpecNames[classFilename] or 3) -- Number of specs in the BiS-lists
+local numberOfSpecs = 3 -- Number of specs in the BiS-lists
+
+if specialSpecNames[classFilename] then -- Special cases
+	numberOfSpecs = 1
+	for i = 1, #specialSpecNames[classFilename] do
+		if #specialSpecNames[classFilename][i] > numberOfSpecs then
+			numberOfSpecs = #specialSpecNames[classFilename][i]
+		end
+	end
+end
 
 local dbDefaults = {
 	dbVersion = 1, -- Just so we later know if we need to update the DB
@@ -229,7 +238,8 @@ local function _OnTooltipSetItem(tooltip, ...)
 
 			local phaseName = phaseNames[results[i][1]]
 			-- If the amount of specs returned by the bisList doesn't match with the amount of player specs, use special-case-table for specName
-			local specName = (results[i][3] == #specNames) and specNames[results[i][2]] or specialSpecNames[classFilename][results[i][2]]
+			--local specName = (results[i][3] == #specNames) and specNames[results[i][2]] or specialSpecNames[classFilename][results[i][2]]
+			local specName = (results[i][3] == #specNames) and specNames[results[i][2]] or specialSpecNames[classFilename][results[i][1]][results[i][2]]
 			local itemSlotRank = results[i][4] and results[i][4].rank or "!"
 			tooltip:AddDoubleLine(tooltipLineIcon .. " " .. specName, WrapTextInColorCode(phaseName, colorHexString) .. "     " .. itemSlotRank, 0, 0.8, 1, 1, 1, 1)
 			if IsModifierKeyDown() then
@@ -583,7 +593,8 @@ function PrettyGoodHybridScrollMixin:FilterUpdateHybridList(phaseNumber, specNum
 	local startTime = debugprofilestop() -- More decimals than in GetTime() ?
 	wipe(self.items)
 
-	local validSpecNumber = (specialSpecNames[classFilename]) and ((#specialSpecNames[classFilename] >= specNumber) and specNumber or #specialSpecNames[classFilename]) or specNumber
+	--local validSpecNumber = (specialSpecNames[classFilename]) and ((#specialSpecNames[classFilename] >= specNumber) and specNumber or #specialSpecNames[classFilename]) or specNumber
+	local validSpecNumber = (specialSpecNames[classFilename] and specialSpecNames[classFilename][phaseNumber] and #specialSpecNames[classFilename][phaseNumber] > 0) and ((#specialSpecNames[classFilename][phaseNumber] >= specNumber) and specNumber or #specialSpecNames[classFilename][phaseNumber]) or specNumber
 
 	for itemId, itemData in pairs(bisLists[phaseNumber][classFilename][validSpecNumber]) do
 		local item = Item:CreateFromItemID(itemId)
@@ -661,6 +672,10 @@ function PrettyGoodHybridScrollMixin:FilterUpdateHybridList(phaseNumber, specNum
 				end
 			end
 		end)
+	end
+
+	if t == 0 then -- Update list if it is empty so the old data gets cleared from the list
+		self:UpdateHybridList()
 	end
 
 	Debug("FilterUpdateHybridList: Accepted %d / %d (in %d categories) (Phase: %d, Spec: %d)", c, t, h, phaseNumber, specNumber)
@@ -813,6 +828,27 @@ do
 		guiContainer:FilterUpdateHybridList(lastClickedPhase, lastClickedSpec)
 
 		Debug("OnClick", Id)
+
+		-- Show/Hide Spec-buttons based on selected Phase
+		local maxNum = (specialSpecNames[classFilename] and #specialSpecNames[classFilename][lastClickedPhase] > 0) and #specialSpecNames[classFilename][lastClickedPhase] or numberOfSpecs
+		for s = 1, numberOfSpecs do
+			local specButton = buttonBar["Spec" .. s]
+			local specCheckButton = buttonBar["SpecCheck" .. s]
+
+			if s > maxNum then
+				specButton:Hide()
+				specCheckButton:Hide()
+			else
+				specButton:Show()
+				specCheckButton:Show()
+
+				if specialSpecNames[classFilename] and #specialSpecNames[classFilename][lastClickedPhase] > 0 then
+					specButton:GetNormalTexture():SetTexCoord(unpack(rolesTextureCoords[specIcons[specialSpecNames[classFilename][lastClickedPhase][s]]])) -- Try to get the role icon based on the spec name
+				else
+					specButton:GetNormalTexture():SetTexCoord(unpack(s <= #specIcons[classFilename] and rolesTextureCoords[specIcons[classFilename][s]] or rolesTextureCoords[#rolesTextureCoords])) -- 1 -> 3 or 4
+				end
+			end
+		end
 	end
 
 	__pbOnShow = function(this)
@@ -883,7 +919,8 @@ do
 
 	__sbOnEnter = function(this)
 		local Id = this:GetID()
-		local tbl = specialSpecNames[classFilename] and specialSpecNames[classFilename] or specNames
+		--local tbl = specialSpecNames[classFilename] and specialSpecNames[classFilename] or specNames
+		local tbl = (specialSpecNames[classFilename] and #specialSpecNames[classFilename][lastClickedPhase] > 0) and specialSpecNames[classFilename][lastClickedPhase] or specNames
 		GameTooltip:SetOwner(this, "ANCHOR_RIGHT")
 		GameTooltip_SetTitle(GameTooltip, tbl[Id])
 		GameTooltip:Show()
@@ -905,7 +942,8 @@ do
 
 	__scOnEnter = function(this)
 		local Id = this:GetID()
-		local tbl = specialSpecNames[classFilename] and specialSpecNames[classFilename] or specNames
+		--local tbl = specialSpecNames[classFilename] and specialSpecNames[classFilename] or specNames
+		local tbl = (specialSpecNames[classFilename] and #specialSpecNames[classFilename][lastClickedPhase] > 0) and specialSpecNames[classFilename][lastClickedPhase] or specNames
 		GameTooltip:SetOwner(this, "ANCHOR_RIGHT")
 		GameTooltip_SetTitle(GameTooltip, "Show in Tooltips")
 		GameTooltip:AddLine(string.format("Show BiS-items for %s in the item tooltips.", tbl[Id]), .5, .5, .5, true)
@@ -938,28 +976,17 @@ for p = 1, #phaseNames do
 	phaseButton:SetScript("OnLeave", __OnLeave)
 
 	if p == 1 then
-		phaseButton:SetPoint("LEFT", phaseText, "RIGHT", 20, 0)
+		--phaseButton:SetPoint("LEFT", phaseText, "RIGHT", 20, 0)
+		phaseButton:SetPoint("LEFT", phaseText, "RIGHT", 10, 0)
 	else
-		phaseButton:SetPoint("LEFT", buttonBar["Phase" .. (p - 1)], "RIGHT", 20, 0)
+		--phaseButton:SetPoint("LEFT", buttonBar["Phase" .. (p - 1)], "RIGHT", 20, 0)
+		phaseButton:SetPoint("LEFT", buttonBar["Phase" .. (p - 1)], "RIGHT", 10, 0)
 	end
 
 	phaseButton:SetNormalTexture(numbersTexture)
 	phaseButton:SetHighlightTexture(numbersTextureHighlight, "ADD")
 	phaseButton:GetNormalTexture():SetTexCoord(unpack(numbersTextureCoords[p])) -- 0 -> 5
 	phaseButton:GetHighlightTexture():SetTexCoord(unpack(numbersTextureCoords[p])) -- 0 -> 5
-
-	--[[
-	local icon = phaseButton:CreateTexture(nil, "BACKGROUND")
-	icon:SetAllPoints()
-	icon:SetTexture(numbersTexture)
-	icon:SetTexCoord(unpack(numbersTextureCoords[p])) -- 0 -> 5
-
-	local highlight = phaseButton:CreateTexture(nil, "HIGHLIGHT")
-	highlight:SetAllPoints(icon)
-	highlight:SetTexture(numbersTextureHighlight)
-	highlight:SetTexCoord(unpack(numbersTextureCoords[p])) -- 0 -> 5
-	highlight:SetBlendMode("ADD")
-	]]
 
 	local phaseCheckButton = CreateFrame("CheckButton", "$parentPhaseCheckButton" .. p, phaseButton)
 	phaseCheckButton:SetSize(24, 24)
@@ -998,28 +1025,22 @@ for s = numberOfSpecs, 1, -1 do
 	if s == numberOfSpecs then
 		specButton:SetPoint("TOPRIGHT", -20, -10)
 	else
-		specButton:SetPoint("RIGHT", buttonBar["Spec" .. (s + 1)], "LEFT", -20, 0)
+		--specButton:SetPoint("RIGHT", buttonBar["Spec" .. (s + 1)], "LEFT", -20, 0)
+		specButton:SetPoint("RIGHT", buttonBar["Spec" .. (s + 1)], "LEFT", -10, 0)
 	end
+
 
 	specButton:SetNormalTexture(rolesTexture)
 	specButton:SetHighlightTexture(rolesTextureHighlight, "ADD")
-	specButton:GetNormalTexture():SetTexCoord(unpack(s <= #specIcons[classFilename] and rolesTextureCoords[specIcons[classFilename][s]] or rolesTextureCoords[#rolesTextureCoords])) -- 1 -> 3 or 4
+	--specButton:GetNormalTexture():SetTexCoord(unpack(s <= #specIcons[classFilename] and rolesTextureCoords[specIcons[classFilename][s]] or rolesTextureCoords[#rolesTextureCoords])) -- 1 -> 3 or 4
+	local initPhase = lastClickedPhase or currentPhase
+	if specialSpecNames[classFilename] and #specialSpecNames[classFilename][initPhase] > 0 then
+		specButton:GetNormalTexture():SetTexCoord(unpack(rolesTextureCoords[specIcons[specialSpecNames[classFilename][initPhase][s]]])) -- Try to get the role icon based on the spec name
+	else
+		specButton:GetNormalTexture():SetTexCoord(unpack(s <= #specIcons[classFilename] and rolesTextureCoords[specIcons[classFilename][s]] or rolesTextureCoords[#rolesTextureCoords])) -- 1 -> 3 or 4
+	end
 	--specButton:GetHighlightTexture():SetTexCoord(unpack(s <= #rolesTextureCoords and rolesTextureCoords[s] or rolesTextureCoords[#rolesTextureCoords])) -- 1 -> 3 or 4
 	specButton:GetHighlightTexture():SetTexCoord(1/32, 31/32, 0, 30/32) -- 32 x 32, snip 1px from left and right, 0px from top and 2px from bottom for better fit
-
-
-	--[[
-	local icon = specButton:CreateTexture(nil, "BACKGROUND")
-	icon:SetAllPoints()
-	icon:SetTexture(numbersTexture)
-	icon:SetTexCoord(unpack(numbersTextureCoords[s + 1])) -- 1 -> 1-4
-
-	local highlight = specButton:CreateTexture(nil, "HIGHLIGHT")
-	highlight:SetAllPoints(icon)
-	highlight:SetTexture(numbersTextureHighlight)
-	highlight:SetTexCoord(unpack(numbersTextureCoords[s + 1])) -- 1 -> 1-4
-	highlight:SetBlendMode("ADD")
-	]]
 
 	local specCheckButton = CreateFrame("CheckButton", "$parentSpecCheckButton" .. s, specButton)
 	specCheckButton:SetSize(24, 24)
@@ -1087,18 +1108,21 @@ SlashCmdList["PRETTYGOODITEMS"] = function(text)
 			local bres, tb = _getBackBagBis()
 			for p = 1, currentPhase do
 				if db.phases[p] then
+					local sName = (specialSpecNames[classFilename] and specialSpecNames[classFilename][p] and #specialSpecNames[classFilename][p] > 0) and specialSpecNames[classFilename][p] or specNames
 					Print(phaseNames[p])
 					Print("   Equipped:")
 					for i = 1, #ires[p] do
 						if db.specs[i] then
-							Print("      %s: %d / %d", specialSpecNames[classFilename] and specialSpecNames[classFilename][i] or specNames[i], ires[p][i], ti)
+							--Print("      %s: %d / %d", specialSpecNames[classFilename] and specialSpecNames[classFilename][i] or specNames[i], ires[p][i], ti)
+							Print("      %s: %d / %d", sName[i], ires[p][i], ti)
 						end
 					end
 
 					Print("   Bags:")
 					for i = 1, #bres[p] do
 						if db.specs[i] then
-							Print("      %s: %d / %d", specialSpecNames[classFilename] and specialSpecNames[classFilename][i] or specNames[i], bres[p][i], tb)
+							--Print("      %s: %d / %d", specialSpecNames[classFilename] and specialSpecNames[classFilename][i] or specNames[i], bres[p][i], tb)
+							Print("      %s: %d / %d", sName[i], bres[p][i], tb)
 						end
 					end
 				end
