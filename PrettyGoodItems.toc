@@ -1,8 +1,7 @@
-## Interface: 25002
-## Interface-BCC: 20502
+## Interface: 20503
 ## Author: Gogh (Mirage Raceway EU) (BCClassic)
 ## Title: Pretty Good |cff00ccffItems|r
-## Version: 1.1
+## Version: @project-version@
 ## Notes: BiS-list addon
 ## RequiredDeps:
 ## SavedVariablesPerCharacter: PrettyGoodItemsCharDB
