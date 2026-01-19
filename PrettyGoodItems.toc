@@ -1,4 +1,4 @@
-## Interface: 20504
+## Interface: 20505
 ## Author: Gogh (Mirage Raceway EU) (BCClassic)
 ## Title: Pretty Good |cff00ccffItems|r
 ## Version: @project-version@
